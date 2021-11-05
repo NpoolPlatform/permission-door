@@ -1,0 +1,39 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: permission-door-npool-top-ingress
+  namespace: kube-system
+  annotations:
+    k8s.kuboard.cn/displayName: permission-door
+    k8s.kuboard.cn/workload: permission-door
+    kubernetes.io/ingress.class: "traefik-internet"
+spec:
+  rules:
+  - host: api.npool.top
+    http:
+      paths:
+      - path: /permission-door
+        backend:
+          serviceName: permission-door
+          servicePort: http
+
+---
+
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: permission-door-xpool-top-ingress
+  namespace: kube-system
+  annotations:
+    k8s.kuboard.cn/displayName: permission-door
+    k8s.kuboard.cn/workload: permission-door
+    kubernetes.io/ingress.class: "traefik-internet"
+spec:
+  rules:
+  - host: api.xpool.top
+    http:
+      paths:
+      - path: /permission-door
+        backend:
+          serviceName: permission-door
+          servicePort: http

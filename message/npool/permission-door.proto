@@ -1,0 +1,182 @@
+syntax = "proto3";
+
+package anubis.v1;
+
+option go_package = "github.com/NpoolPlatform/permission-door/message/npool";
+
+import "google/api/annotations.proto";
+import "google/protobuf/empty.proto";
+
+service Anubis {
+    // rpc Echo (StringMessage) returns (StringMessage){
+    //     option (google.api.http) = {
+    //         post: "/v1/echo"
+    //         body: "*"
+    //     };
+    // }
+
+    // Method Version
+    rpc Version (google.protobuf.Empty) returns (VersionResponse){
+        option (google.api.http) = {
+            post: "/version"
+            body: "*"
+        };
+    }
+
+    /*
+    Set policies to Role.
+    */
+    rpc SetRolePolicies (SetRolePoliciesRequest) returns (SetRolePoliciesResponse) {
+        option (google.api.http) = {
+            post: "/v1/set/role/policies"
+            body: "*"
+        };
+    };
+    /*
+    Authenticate Role permission.
+    */
+    rpc AuthenticateRolePolicy (AuthenticateRolePolicyRequest) returns (AuthenticateRolePolicyResponse) {
+        option (google.api.http) = {
+            post: "/v1/authenticate/role/policy"
+            body: "*"
+        };
+    };
+    rpc AuthenticateRolesPolicy (AuthenticateRolesPolicyRequest) returns (AuthenticateRolesPolicyResponse) {
+        option (google.api.http) = {
+            post: "/v1/authenticate/roles/policy"
+            body: "*"
+        };
+    };
+    /*
+    Get all policies of role.
+    */
+    rpc GetRolePolicies (GetRolePoliciesRequest) returns (GetRolePoliciesResponse) {
+        option (google.api.http) = {
+            post: "/v1/get/role/policies"
+            body: "*"
+        };
+    };
+    /*
+    Cancel some policies of role.
+    */
+    rpc UnsetRolePolicies (UnsetRolePoliciesRequest) returns (google.protobuf.Empty) {
+        option (google.api.http) = {
+            post: "/v1/unset/role/policies"
+            body: "*"
+        };
+    };
+    /*
+    Delete data of role.
+    */
+    rpc DeleteRole (DeleteRoleRequest) returns (DeleteRoleResponse) {
+        option (google.api.http) = {
+            post: "/v1/delete/role"
+            body: "*"
+        };
+    };
+    /*
+    Delete resources.
+    */
+    rpc DeleteResource (DeleteResourceRequest) returns (google.protobuf.Empty) {
+        option (google.api.http) = {
+            post: "/v1/delete/resource"
+            body: "*"
+        };
+    };
+}
+
+// message StringMessage {
+//     string value = 100;
+// }
+
+// request body and response
+message VersionResponse {
+    string Info = 100;
+}
+
+message ResourcePolicy {
+    string ResourceId = 1;
+    string Action = 2;
+}
+
+message SetRolePoliciesRequest {
+    string RoleId = 1;
+    repeated ResourcePolicy ResourcePolicies = 2;
+    string AppId = 3;
+}
+
+message SetRolePoliciesResponse {
+    string Info = 1;
+}
+
+message AuthenticateRolePolicyRequest {
+    string RoleId = 1;
+    ResourcePolicy Policy = 2;
+    string AppId = 3;
+}
+
+message NoDataResponse {
+    string Info = 1;
+}
+
+message PageInfo {
+    int32 PageIndex = 1;
+    int32 PageCount = 2;
+    int32 Total = 3;
+}
+
+message GetRolePoliciesRequest {
+    string RoleId = 1;
+    string AppId = 2;
+}
+
+message RolePolicies {
+    repeated ResourcePolicy Policies = 1;
+        string RoleId = 2;
+        string AppId = 3;
+}
+
+message GetRolePoliciesResponse {
+    RolePolicies Infos = 1;
+}
+
+message AuthenticateRolesPolicyRequest {
+    string AppId = 1;
+    repeated string RoleIds = 2;
+    ResourcePolicy Policy = 3;
+}
+
+message AuthenticateRolePolicyResponse {
+    string Info = 1;
+}
+
+message AuthenticateRolesPolicyResponse {
+    string Info = 1;
+}
+
+message UnsetRolePoliciesRequest {
+    string RoleId = 1;
+    string AppId = 2;
+    repeated ResourcePolicy Policies = 3;
+}
+
+message DeleteRoleRequest {
+    string AppId = 1;
+    repeated string RoleIds = 2;
+}
+
+message Policy {
+    string AppId = 1;
+    string UserId = 2;
+    string ResourceId = 3;
+    string Action = 4;
+}
+
+message DeleteRoleResponse {
+    string Info = 1;
+}
+
+message DeleteResourceRequest {
+    string AppId = 1;
+    repeated string ResourceIds = 2;
+}

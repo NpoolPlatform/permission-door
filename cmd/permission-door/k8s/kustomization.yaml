@@ -1,0 +1,6 @@
+commonLabels:
+  # app: permission-door
+
+resources:
+- 01-permission-door.yaml
+- 02-ingress.yaml
