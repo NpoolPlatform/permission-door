@@ -1,13 +1,13 @@
 syntax = "proto3";
 
-package anubis.v1;
+package permission.door.v1;
 
 option go_package = "github.com/NpoolPlatform/permission-door/message/npool";
 
 import "google/api/annotations.proto";
 import "google/protobuf/empty.proto";
 
-service Anubis {
+service PermissionDoor {
     // rpc Echo (StringMessage) returns (StringMessage){
     //     option (google.api.http) = {
     //         post: "/v1/echo"

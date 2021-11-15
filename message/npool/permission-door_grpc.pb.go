@@ -15,10 +15,10 @@ import (
 // Requires gRPC-Go v1.32.0 or later.
 const _ = grpc.SupportPackageIsVersion7
 
-// AnubisClient is the client API for Anubis service.
+// PermissionDoorClient is the client API for PermissionDoor service.
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
-type AnubisClient interface {
+type PermissionDoorClient interface {
 	// Method Version
 	Version(ctx context.Context, in *emptypb.Empty, opts ...grpc.CallOption) (*VersionResponse, error)
 	//
@@ -43,99 +43,99 @@ type AnubisClient interface {
 	AuthenticateUserPolicyByID(ctx context.Context, in *AuthenticateUserPolicyByIDRequest, opts ...grpc.CallOption) (*AuthenticateUserPolicyByIDResponse, error)
 }
 
-type anubisClient struct {
+type permissionDoorClient struct {
 	cc grpc.ClientConnInterface
 }
 
-func NewAnubisClient(cc grpc.ClientConnInterface) AnubisClient {
-	return &anubisClient{cc}
+func NewPermissionDoorClient(cc grpc.ClientConnInterface) PermissionDoorClient {
+	return &permissionDoorClient{cc}
 }
 
-func (c *anubisClient) Version(ctx context.Context, in *emptypb.Empty, opts ...grpc.CallOption) (*VersionResponse, error) {
+func (c *permissionDoorClient) Version(ctx context.Context, in *emptypb.Empty, opts ...grpc.CallOption) (*VersionResponse, error) {
 	out := new(VersionResponse)
-	err := c.cc.Invoke(ctx, "/anubis.v1.Anubis/Version", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/permission.door.v1.PermissionDoor/Version", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *anubisClient) SetRolePolicies(ctx context.Context, in *SetRolePoliciesRequest, opts ...grpc.CallOption) (*SetRolePoliciesResponse, error) {
+func (c *permissionDoorClient) SetRolePolicies(ctx context.Context, in *SetRolePoliciesRequest, opts ...grpc.CallOption) (*SetRolePoliciesResponse, error) {
 	out := new(SetRolePoliciesResponse)
-	err := c.cc.Invoke(ctx, "/anubis.v1.Anubis/SetRolePolicies", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/permission.door.v1.PermissionDoor/SetRolePolicies", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *anubisClient) AuthenticateRolePolicy(ctx context.Context, in *AuthenticateRolePolicyRequest, opts ...grpc.CallOption) (*AuthenticateRolePolicyResponse, error) {
+func (c *permissionDoorClient) AuthenticateRolePolicy(ctx context.Context, in *AuthenticateRolePolicyRequest, opts ...grpc.CallOption) (*AuthenticateRolePolicyResponse, error) {
 	out := new(AuthenticateRolePolicyResponse)
-	err := c.cc.Invoke(ctx, "/anubis.v1.Anubis/AuthenticateRolePolicy", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/permission.door.v1.PermissionDoor/AuthenticateRolePolicy", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *anubisClient) AuthenticateRolesPolicy(ctx context.Context, in *AuthenticateRolesPolicyRequest, opts ...grpc.CallOption) (*AuthenticateRolesPolicyResponse, error) {
+func (c *permissionDoorClient) AuthenticateRolesPolicy(ctx context.Context, in *AuthenticateRolesPolicyRequest, opts ...grpc.CallOption) (*AuthenticateRolesPolicyResponse, error) {
 	out := new(AuthenticateRolesPolicyResponse)
-	err := c.cc.Invoke(ctx, "/anubis.v1.Anubis/AuthenticateRolesPolicy", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/permission.door.v1.PermissionDoor/AuthenticateRolesPolicy", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *anubisClient) GetRolePolicies(ctx context.Context, in *GetRolePoliciesRequest, opts ...grpc.CallOption) (*GetRolePoliciesResponse, error) {
+func (c *permissionDoorClient) GetRolePolicies(ctx context.Context, in *GetRolePoliciesRequest, opts ...grpc.CallOption) (*GetRolePoliciesResponse, error) {
 	out := new(GetRolePoliciesResponse)
-	err := c.cc.Invoke(ctx, "/anubis.v1.Anubis/GetRolePolicies", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/permission.door.v1.PermissionDoor/GetRolePolicies", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *anubisClient) UnsetRolePolicies(ctx context.Context, in *UnsetRolePoliciesRequest, opts ...grpc.CallOption) (*UnsetRolePoliciesResponse, error) {
+func (c *permissionDoorClient) UnsetRolePolicies(ctx context.Context, in *UnsetRolePoliciesRequest, opts ...grpc.CallOption) (*UnsetRolePoliciesResponse, error) {
 	out := new(UnsetRolePoliciesResponse)
-	err := c.cc.Invoke(ctx, "/anubis.v1.Anubis/UnsetRolePolicies", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/permission.door.v1.PermissionDoor/UnsetRolePolicies", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *anubisClient) DeleteRole(ctx context.Context, in *DeleteRoleRequest, opts ...grpc.CallOption) (*DeleteRoleResponse, error) {
+func (c *permissionDoorClient) DeleteRole(ctx context.Context, in *DeleteRoleRequest, opts ...grpc.CallOption) (*DeleteRoleResponse, error) {
 	out := new(DeleteRoleResponse)
-	err := c.cc.Invoke(ctx, "/anubis.v1.Anubis/DeleteRole", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/permission.door.v1.PermissionDoor/DeleteRole", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *anubisClient) DeleteResource(ctx context.Context, in *DeleteResourceRequest, opts ...grpc.CallOption) (*DeleteResourceResponse, error) {
+func (c *permissionDoorClient) DeleteResource(ctx context.Context, in *DeleteResourceRequest, opts ...grpc.CallOption) (*DeleteResourceResponse, error) {
 	out := new(DeleteResourceResponse)
-	err := c.cc.Invoke(ctx, "/anubis.v1.Anubis/DeleteResource", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/permission.door.v1.PermissionDoor/DeleteResource", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *anubisClient) AuthenticateUserPolicyByID(ctx context.Context, in *AuthenticateUserPolicyByIDRequest, opts ...grpc.CallOption) (*AuthenticateUserPolicyByIDResponse, error) {
+func (c *permissionDoorClient) AuthenticateUserPolicyByID(ctx context.Context, in *AuthenticateUserPolicyByIDRequest, opts ...grpc.CallOption) (*AuthenticateUserPolicyByIDResponse, error) {
 	out := new(AuthenticateUserPolicyByIDResponse)
-	err := c.cc.Invoke(ctx, "/anubis.v1.Anubis/AuthenticateUserPolicyByID", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/permission.door.v1.PermissionDoor/AuthenticateUserPolicyByID", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-// AnubisServer is the server API for Anubis service.
-// All implementations must embed UnimplementedAnubisServer
+// PermissionDoorServer is the server API for PermissionDoor service.
+// All implementations must embed UnimplementedPermissionDoorServer
 // for forward compatibility
-type AnubisServer interface {
+type PermissionDoorServer interface {
 	// Method Version
 	Version(context.Context, *emptypb.Empty) (*VersionResponse, error)
 	//
@@ -158,257 +158,257 @@ type AnubisServer interface {
 	//Delete resources.
 	DeleteResource(context.Context, *DeleteResourceRequest) (*DeleteResourceResponse, error)
 	AuthenticateUserPolicyByID(context.Context, *AuthenticateUserPolicyByIDRequest) (*AuthenticateUserPolicyByIDResponse, error)
-	mustEmbedUnimplementedAnubisServer()
+	mustEmbedUnimplementedPermissionDoorServer()
 }
 
-// UnimplementedAnubisServer must be embedded to have forward compatible implementations.
-type UnimplementedAnubisServer struct {
+// UnimplementedPermissionDoorServer must be embedded to have forward compatible implementations.
+type UnimplementedPermissionDoorServer struct {
 }
 
-func (UnimplementedAnubisServer) Version(context.Context, *emptypb.Empty) (*VersionResponse, error) {
+func (UnimplementedPermissionDoorServer) Version(context.Context, *emptypb.Empty) (*VersionResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Version not implemented")
 }
-func (UnimplementedAnubisServer) SetRolePolicies(context.Context, *SetRolePoliciesRequest) (*SetRolePoliciesResponse, error) {
+func (UnimplementedPermissionDoorServer) SetRolePolicies(context.Context, *SetRolePoliciesRequest) (*SetRolePoliciesResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method SetRolePolicies not implemented")
 }
-func (UnimplementedAnubisServer) AuthenticateRolePolicy(context.Context, *AuthenticateRolePolicyRequest) (*AuthenticateRolePolicyResponse, error) {
+func (UnimplementedPermissionDoorServer) AuthenticateRolePolicy(context.Context, *AuthenticateRolePolicyRequest) (*AuthenticateRolePolicyResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method AuthenticateRolePolicy not implemented")
 }
-func (UnimplementedAnubisServer) AuthenticateRolesPolicy(context.Context, *AuthenticateRolesPolicyRequest) (*AuthenticateRolesPolicyResponse, error) {
+func (UnimplementedPermissionDoorServer) AuthenticateRolesPolicy(context.Context, *AuthenticateRolesPolicyRequest) (*AuthenticateRolesPolicyResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method AuthenticateRolesPolicy not implemented")
 }
-func (UnimplementedAnubisServer) GetRolePolicies(context.Context, *GetRolePoliciesRequest) (*GetRolePoliciesResponse, error) {
+func (UnimplementedPermissionDoorServer) GetRolePolicies(context.Context, *GetRolePoliciesRequest) (*GetRolePoliciesResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetRolePolicies not implemented")
 }
-func (UnimplementedAnubisServer) UnsetRolePolicies(context.Context, *UnsetRolePoliciesRequest) (*UnsetRolePoliciesResponse, error) {
+func (UnimplementedPermissionDoorServer) UnsetRolePolicies(context.Context, *UnsetRolePoliciesRequest) (*UnsetRolePoliciesResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method UnsetRolePolicies not implemented")
 }
-func (UnimplementedAnubisServer) DeleteRole(context.Context, *DeleteRoleRequest) (*DeleteRoleResponse, error) {
+func (UnimplementedPermissionDoorServer) DeleteRole(context.Context, *DeleteRoleRequest) (*DeleteRoleResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method DeleteRole not implemented")
 }
-func (UnimplementedAnubisServer) DeleteResource(context.Context, *DeleteResourceRequest) (*DeleteResourceResponse, error) {
+func (UnimplementedPermissionDoorServer) DeleteResource(context.Context, *DeleteResourceRequest) (*DeleteResourceResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method DeleteResource not implemented")
 }
-func (UnimplementedAnubisServer) AuthenticateUserPolicyByID(context.Context, *AuthenticateUserPolicyByIDRequest) (*AuthenticateUserPolicyByIDResponse, error) {
+func (UnimplementedPermissionDoorServer) AuthenticateUserPolicyByID(context.Context, *AuthenticateUserPolicyByIDRequest) (*AuthenticateUserPolicyByIDResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method AuthenticateUserPolicyByID not implemented")
 }
-func (UnimplementedAnubisServer) mustEmbedUnimplementedAnubisServer() {}
+func (UnimplementedPermissionDoorServer) mustEmbedUnimplementedPermissionDoorServer() {}
 
-// UnsafeAnubisServer may be embedded to opt out of forward compatibility for this service.
-// Use of this interface is not recommended, as added methods to AnubisServer will
+// UnsafePermissionDoorServer may be embedded to opt out of forward compatibility for this service.
+// Use of this interface is not recommended, as added methods to PermissionDoorServer will
 // result in compilation errors.
-type UnsafeAnubisServer interface {
-	mustEmbedUnimplementedAnubisServer()
+type UnsafePermissionDoorServer interface {
+	mustEmbedUnimplementedPermissionDoorServer()
 }
 
-func RegisterAnubisServer(s grpc.ServiceRegistrar, srv AnubisServer) {
-	s.RegisterService(&Anubis_ServiceDesc, srv)
+func RegisterPermissionDoorServer(s grpc.ServiceRegistrar, srv PermissionDoorServer) {
+	s.RegisterService(&PermissionDoor_ServiceDesc, srv)
 }
 
-func _Anubis_Version_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _PermissionDoor_Version_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(emptypb.Empty)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(AnubisServer).Version(ctx, in)
+		return srv.(PermissionDoorServer).Version(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/anubis.v1.Anubis/Version",
+		FullMethod: "/permission.door.v1.PermissionDoor/Version",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(AnubisServer).Version(ctx, req.(*emptypb.Empty))
+		return srv.(PermissionDoorServer).Version(ctx, req.(*emptypb.Empty))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Anubis_SetRolePolicies_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _PermissionDoor_SetRolePolicies_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(SetRolePoliciesRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(AnubisServer).SetRolePolicies(ctx, in)
+		return srv.(PermissionDoorServer).SetRolePolicies(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/anubis.v1.Anubis/SetRolePolicies",
+		FullMethod: "/permission.door.v1.PermissionDoor/SetRolePolicies",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(AnubisServer).SetRolePolicies(ctx, req.(*SetRolePoliciesRequest))
+		return srv.(PermissionDoorServer).SetRolePolicies(ctx, req.(*SetRolePoliciesRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Anubis_AuthenticateRolePolicy_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _PermissionDoor_AuthenticateRolePolicy_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(AuthenticateRolePolicyRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(AnubisServer).AuthenticateRolePolicy(ctx, in)
+		return srv.(PermissionDoorServer).AuthenticateRolePolicy(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/anubis.v1.Anubis/AuthenticateRolePolicy",
+		FullMethod: "/permission.door.v1.PermissionDoor/AuthenticateRolePolicy",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(AnubisServer).AuthenticateRolePolicy(ctx, req.(*AuthenticateRolePolicyRequest))
+		return srv.(PermissionDoorServer).AuthenticateRolePolicy(ctx, req.(*AuthenticateRolePolicyRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Anubis_AuthenticateRolesPolicy_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _PermissionDoor_AuthenticateRolesPolicy_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(AuthenticateRolesPolicyRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(AnubisServer).AuthenticateRolesPolicy(ctx, in)
+		return srv.(PermissionDoorServer).AuthenticateRolesPolicy(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/anubis.v1.Anubis/AuthenticateRolesPolicy",
+		FullMethod: "/permission.door.v1.PermissionDoor/AuthenticateRolesPolicy",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(AnubisServer).AuthenticateRolesPolicy(ctx, req.(*AuthenticateRolesPolicyRequest))
+		return srv.(PermissionDoorServer).AuthenticateRolesPolicy(ctx, req.(*AuthenticateRolesPolicyRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Anubis_GetRolePolicies_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _PermissionDoor_GetRolePolicies_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetRolePoliciesRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(AnubisServer).GetRolePolicies(ctx, in)
+		return srv.(PermissionDoorServer).GetRolePolicies(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/anubis.v1.Anubis/GetRolePolicies",
+		FullMethod: "/permission.door.v1.PermissionDoor/GetRolePolicies",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(AnubisServer).GetRolePolicies(ctx, req.(*GetRolePoliciesRequest))
+		return srv.(PermissionDoorServer).GetRolePolicies(ctx, req.(*GetRolePoliciesRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Anubis_UnsetRolePolicies_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _PermissionDoor_UnsetRolePolicies_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(UnsetRolePoliciesRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(AnubisServer).UnsetRolePolicies(ctx, in)
+		return srv.(PermissionDoorServer).UnsetRolePolicies(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/anubis.v1.Anubis/UnsetRolePolicies",
+		FullMethod: "/permission.door.v1.PermissionDoor/UnsetRolePolicies",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(AnubisServer).UnsetRolePolicies(ctx, req.(*UnsetRolePoliciesRequest))
+		return srv.(PermissionDoorServer).UnsetRolePolicies(ctx, req.(*UnsetRolePoliciesRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Anubis_DeleteRole_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _PermissionDoor_DeleteRole_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(DeleteRoleRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(AnubisServer).DeleteRole(ctx, in)
+		return srv.(PermissionDoorServer).DeleteRole(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/anubis.v1.Anubis/DeleteRole",
+		FullMethod: "/permission.door.v1.PermissionDoor/DeleteRole",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(AnubisServer).DeleteRole(ctx, req.(*DeleteRoleRequest))
+		return srv.(PermissionDoorServer).DeleteRole(ctx, req.(*DeleteRoleRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Anubis_DeleteResource_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _PermissionDoor_DeleteResource_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(DeleteResourceRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(AnubisServer).DeleteResource(ctx, in)
+		return srv.(PermissionDoorServer).DeleteResource(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/anubis.v1.Anubis/DeleteResource",
+		FullMethod: "/permission.door.v1.PermissionDoor/DeleteResource",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(AnubisServer).DeleteResource(ctx, req.(*DeleteResourceRequest))
+		return srv.(PermissionDoorServer).DeleteResource(ctx, req.(*DeleteResourceRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Anubis_AuthenticateUserPolicyByID_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _PermissionDoor_AuthenticateUserPolicyByID_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(AuthenticateUserPolicyByIDRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(AnubisServer).AuthenticateUserPolicyByID(ctx, in)
+		return srv.(PermissionDoorServer).AuthenticateUserPolicyByID(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/anubis.v1.Anubis/AuthenticateUserPolicyByID",
+		FullMethod: "/permission.door.v1.PermissionDoor/AuthenticateUserPolicyByID",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(AnubisServer).AuthenticateUserPolicyByID(ctx, req.(*AuthenticateUserPolicyByIDRequest))
+		return srv.(PermissionDoorServer).AuthenticateUserPolicyByID(ctx, req.(*AuthenticateUserPolicyByIDRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-// Anubis_ServiceDesc is the grpc.ServiceDesc for Anubis service.
+// PermissionDoor_ServiceDesc is the grpc.ServiceDesc for PermissionDoor service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
-var Anubis_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "anubis.v1.Anubis",
-	HandlerType: (*AnubisServer)(nil),
+var PermissionDoor_ServiceDesc = grpc.ServiceDesc{
+	ServiceName: "permission.door.v1.PermissionDoor",
+	HandlerType: (*PermissionDoorServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
 			MethodName: "Version",
-			Handler:    _Anubis_Version_Handler,
+			Handler:    _PermissionDoor_Version_Handler,
 		},
 		{
 			MethodName: "SetRolePolicies",
-			Handler:    _Anubis_SetRolePolicies_Handler,
+			Handler:    _PermissionDoor_SetRolePolicies_Handler,
 		},
 		{
 			MethodName: "AuthenticateRolePolicy",
-			Handler:    _Anubis_AuthenticateRolePolicy_Handler,
+			Handler:    _PermissionDoor_AuthenticateRolePolicy_Handler,
 		},
 		{
 			MethodName: "AuthenticateRolesPolicy",
-			Handler:    _Anubis_AuthenticateRolesPolicy_Handler,
+			Handler:    _PermissionDoor_AuthenticateRolesPolicy_Handler,
 		},
 		{
 			MethodName: "GetRolePolicies",
-			Handler:    _Anubis_GetRolePolicies_Handler,
+			Handler:    _PermissionDoor_GetRolePolicies_Handler,
 		},
 		{
 			MethodName: "UnsetRolePolicies",
-			Handler:    _Anubis_UnsetRolePolicies_Handler,
+			Handler:    _PermissionDoor_UnsetRolePolicies_Handler,
 		},
 		{
 			MethodName: "DeleteRole",
-			Handler:    _Anubis_DeleteRole_Handler,
+			Handler:    _PermissionDoor_DeleteRole_Handler,
 		},
 		{
 			MethodName: "DeleteResource",
-			Handler:    _Anubis_DeleteResource_Handler,
+			Handler:    _PermissionDoor_DeleteResource_Handler,
 		},
 		{
 			MethodName: "AuthenticateUserPolicyByID",
-			Handler:    _Anubis_AuthenticateUserPolicyByID_Handler,
+			Handler:    _PermissionDoor_AuthenticateUserPolicyByID_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

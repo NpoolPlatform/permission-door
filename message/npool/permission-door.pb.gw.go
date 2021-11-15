@@ -32,7 +32,7 @@ var _ = runtime.String
 var _ = utilities.NewDoubleArray
 var _ = metadata.Join
 
-func request_Anubis_Version_0(ctx context.Context, marshaler runtime.Marshaler, client AnubisClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
+func request_PermissionDoor_Version_0(ctx context.Context, marshaler runtime.Marshaler, client PermissionDoorClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
 	var protoReq emptypb.Empty
 	var metadata runtime.ServerMetadata
 
@@ -49,7 +49,7 @@ func request_Anubis_Version_0(ctx context.Context, marshaler runtime.Marshaler, 
 
 }
 
-func local_request_Anubis_Version_0(ctx context.Context, marshaler runtime.Marshaler, server AnubisServer, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
+func local_request_PermissionDoor_Version_0(ctx context.Context, marshaler runtime.Marshaler, server PermissionDoorServer, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
 	var protoReq emptypb.Empty
 	var metadata runtime.ServerMetadata
 
@@ -66,7 +66,7 @@ func local_request_Anubis_Version_0(ctx context.Context, marshaler runtime.Marsh
 
 }
 
-func request_Anubis_SetRolePolicies_0(ctx context.Context, marshaler runtime.Marshaler, client AnubisClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
+func request_PermissionDoor_SetRolePolicies_0(ctx context.Context, marshaler runtime.Marshaler, client PermissionDoorClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
 	var protoReq SetRolePoliciesRequest
 	var metadata runtime.ServerMetadata
 
@@ -83,7 +83,7 @@ func request_Anubis_SetRolePolicies_0(ctx context.Context, marshaler runtime.Mar
 
 }
 
-func local_request_Anubis_SetRolePolicies_0(ctx context.Context, marshaler runtime.Marshaler, server AnubisServer, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
+func local_request_PermissionDoor_SetRolePolicies_0(ctx context.Context, marshaler runtime.Marshaler, server PermissionDoorServer, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
 	var protoReq SetRolePoliciesRequest
 	var metadata runtime.ServerMetadata
 
@@ -100,7 +100,7 @@ func local_request_Anubis_SetRolePolicies_0(ctx context.Context, marshaler runti
 
 }
 
-func request_Anubis_AuthenticateRolePolicy_0(ctx context.Context, marshaler runtime.Marshaler, client AnubisClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
+func request_PermissionDoor_AuthenticateRolePolicy_0(ctx context.Context, marshaler runtime.Marshaler, client PermissionDoorClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
 	var protoReq AuthenticateRolePolicyRequest
 	var metadata runtime.ServerMetadata
 
@@ -117,7 +117,7 @@ func request_Anubis_AuthenticateRolePolicy_0(ctx context.Context, marshaler runt
 
 }
 
-func local_request_Anubis_AuthenticateRolePolicy_0(ctx context.Context, marshaler runtime.Marshaler, server AnubisServer, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
+func local_request_PermissionDoor_AuthenticateRolePolicy_0(ctx context.Context, marshaler runtime.Marshaler, server PermissionDoorServer, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
 	var protoReq AuthenticateRolePolicyRequest
 	var metadata runtime.ServerMetadata
 
@@ -134,7 +134,7 @@ func local_request_Anubis_AuthenticateRolePolicy_0(ctx context.Context, marshale
 
 }
 
-func request_Anubis_AuthenticateRolesPolicy_0(ctx context.Context, marshaler runtime.Marshaler, client AnubisClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
+func request_PermissionDoor_AuthenticateRolesPolicy_0(ctx context.Context, marshaler runtime.Marshaler, client PermissionDoorClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
 	var protoReq AuthenticateRolesPolicyRequest
 	var metadata runtime.ServerMetadata
 
@@ -151,7 +151,7 @@ func request_Anubis_AuthenticateRolesPolicy_0(ctx context.Context, marshaler run
 
 }
 
-func local_request_Anubis_AuthenticateRolesPolicy_0(ctx context.Context, marshaler runtime.Marshaler, server AnubisServer, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
+func local_request_PermissionDoor_AuthenticateRolesPolicy_0(ctx context.Context, marshaler runtime.Marshaler, server PermissionDoorServer, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
 	var protoReq AuthenticateRolesPolicyRequest
 	var metadata runtime.ServerMetadata
 
@@ -168,7 +168,7 @@ func local_request_Anubis_AuthenticateRolesPolicy_0(ctx context.Context, marshal
 
 }
 
-func request_Anubis_GetRolePolicies_0(ctx context.Context, marshaler runtime.Marshaler, client AnubisClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
+func request_PermissionDoor_GetRolePolicies_0(ctx context.Context, marshaler runtime.Marshaler, client PermissionDoorClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
 	var protoReq GetRolePoliciesRequest
 	var metadata runtime.ServerMetadata
 
@@ -185,7 +185,7 @@ func request_Anubis_GetRolePolicies_0(ctx context.Context, marshaler runtime.Mar
 
 }
 
-func local_request_Anubis_GetRolePolicies_0(ctx context.Context, marshaler runtime.Marshaler, server AnubisServer, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
+func local_request_PermissionDoor_GetRolePolicies_0(ctx context.Context, marshaler runtime.Marshaler, server PermissionDoorServer, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
 	var protoReq GetRolePoliciesRequest
 	var metadata runtime.ServerMetadata
 
@@ -202,7 +202,7 @@ func local_request_Anubis_GetRolePolicies_0(ctx context.Context, marshaler runti
 
 }
 
-func request_Anubis_UnsetRolePolicies_0(ctx context.Context, marshaler runtime.Marshaler, client AnubisClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
+func request_PermissionDoor_UnsetRolePolicies_0(ctx context.Context, marshaler runtime.Marshaler, client PermissionDoorClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
 	var protoReq UnsetRolePoliciesRequest
 	var metadata runtime.ServerMetadata
 
@@ -219,7 +219,7 @@ func request_Anubis_UnsetRolePolicies_0(ctx context.Context, marshaler runtime.M
 
 }
 
-func local_request_Anubis_UnsetRolePolicies_0(ctx context.Context, marshaler runtime.Marshaler, server AnubisServer, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
+func local_request_PermissionDoor_UnsetRolePolicies_0(ctx context.Context, marshaler runtime.Marshaler, server PermissionDoorServer, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
 	var protoReq UnsetRolePoliciesRequest
 	var metadata runtime.ServerMetadata
 
@@ -236,7 +236,7 @@ func local_request_Anubis_UnsetRolePolicies_0(ctx context.Context, marshaler run
 
 }
 
-func request_Anubis_DeleteRole_0(ctx context.Context, marshaler runtime.Marshaler, client AnubisClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
+func request_PermissionDoor_DeleteRole_0(ctx context.Context, marshaler runtime.Marshaler, client PermissionDoorClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
 	var protoReq DeleteRoleRequest
 	var metadata runtime.ServerMetadata
 
@@ -253,7 +253,7 @@ func request_Anubis_DeleteRole_0(ctx context.Context, marshaler runtime.Marshale
 
 }
 
-func local_request_Anubis_DeleteRole_0(ctx context.Context, marshaler runtime.Marshaler, server AnubisServer, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
+func local_request_PermissionDoor_DeleteRole_0(ctx context.Context, marshaler runtime.Marshaler, server PermissionDoorServer, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
 	var protoReq DeleteRoleRequest
 	var metadata runtime.ServerMetadata
 
@@ -270,7 +270,7 @@ func local_request_Anubis_DeleteRole_0(ctx context.Context, marshaler runtime.Ma
 
 }
 
-func request_Anubis_DeleteResource_0(ctx context.Context, marshaler runtime.Marshaler, client AnubisClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
+func request_PermissionDoor_DeleteResource_0(ctx context.Context, marshaler runtime.Marshaler, client PermissionDoorClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
 	var protoReq DeleteResourceRequest
 	var metadata runtime.ServerMetadata
 
@@ -287,7 +287,7 @@ func request_Anubis_DeleteResource_0(ctx context.Context, marshaler runtime.Mars
 
 }
 
-func local_request_Anubis_DeleteResource_0(ctx context.Context, marshaler runtime.Marshaler, server AnubisServer, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
+func local_request_PermissionDoor_DeleteResource_0(ctx context.Context, marshaler runtime.Marshaler, server PermissionDoorServer, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
 	var protoReq DeleteResourceRequest
 	var metadata runtime.ServerMetadata
 
@@ -304,7 +304,7 @@ func local_request_Anubis_DeleteResource_0(ctx context.Context, marshaler runtim
 
 }
 
-func request_Anubis_AuthenticateUserPolicyByID_0(ctx context.Context, marshaler runtime.Marshaler, client AnubisClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
+func request_PermissionDoor_AuthenticateUserPolicyByID_0(ctx context.Context, marshaler runtime.Marshaler, client PermissionDoorClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
 	var protoReq AuthenticateUserPolicyByIDRequest
 	var metadata runtime.ServerMetadata
 
@@ -321,7 +321,7 @@ func request_Anubis_AuthenticateUserPolicyByID_0(ctx context.Context, marshaler 
 
 }
 
-func local_request_Anubis_AuthenticateUserPolicyByID_0(ctx context.Context, marshaler runtime.Marshaler, server AnubisServer, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
+func local_request_PermissionDoor_AuthenticateUserPolicyByID_0(ctx context.Context, marshaler runtime.Marshaler, server PermissionDoorServer, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
 	var protoReq AuthenticateUserPolicyByIDRequest
 	var metadata runtime.ServerMetadata
 
@@ -338,24 +338,24 @@ func local_request_Anubis_AuthenticateUserPolicyByID_0(ctx context.Context, mars
 
 }
 
-// RegisterAnubisHandlerServer registers the http handlers for service Anubis to "mux".
-// UnaryRPC     :call AnubisServer directly.
+// RegisterPermissionDoorHandlerServer registers the http handlers for service PermissionDoor to "mux".
+// UnaryRPC     :call PermissionDoorServer directly.
 // StreamingRPC :currently unsupported pending https://github.com/grpc/grpc-go/issues/906.
-// Note that using this registration option will cause many gRPC library features to stop working. Consider using RegisterAnubisHandlerFromEndpoint instead.
-func RegisterAnubisHandlerServer(ctx context.Context, mux *runtime.ServeMux, server AnubisServer) error {
+// Note that using this registration option will cause many gRPC library features to stop working. Consider using RegisterPermissionDoorHandlerFromEndpoint instead.
+func RegisterPermissionDoorHandlerServer(ctx context.Context, mux *runtime.ServeMux, server PermissionDoorServer) error {
 
-	mux.Handle("POST", pattern_Anubis_Version_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
+	mux.Handle("POST", pattern_PermissionDoor_Version_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		var stream runtime.ServerTransportStream
 		ctx = grpc.NewContextWithServerTransportStream(ctx, &stream)
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		rctx, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/anubis.v1.Anubis/Version", runtime.WithHTTPPathPattern("/version"))
+		rctx, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/permission.door.v1.PermissionDoor/Version", runtime.WithHTTPPathPattern("/version"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
 		}
-		resp, md, err := local_request_Anubis_Version_0(rctx, inboundMarshaler, server, req, pathParams)
+		resp, md, err := local_request_PermissionDoor_Version_0(rctx, inboundMarshaler, server, req, pathParams)
 		md.HeaderMD, md.TrailerMD = metadata.Join(md.HeaderMD, stream.Header()), metadata.Join(md.TrailerMD, stream.Trailer())
 		ctx = runtime.NewServerMetadataContext(ctx, md)
 		if err != nil {
@@ -363,22 +363,22 @@ func RegisterAnubisHandlerServer(ctx context.Context, mux *runtime.ServeMux, ser
 			return
 		}
 
-		forward_Anubis_Version_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
+		forward_PermissionDoor_Version_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
 
 	})
 
-	mux.Handle("POST", pattern_Anubis_SetRolePolicies_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
+	mux.Handle("POST", pattern_PermissionDoor_SetRolePolicies_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		var stream runtime.ServerTransportStream
 		ctx = grpc.NewContextWithServerTransportStream(ctx, &stream)
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		rctx, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/anubis.v1.Anubis/SetRolePolicies", runtime.WithHTTPPathPattern("/v1/set/role/policies"))
+		rctx, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/permission.door.v1.PermissionDoor/SetRolePolicies", runtime.WithHTTPPathPattern("/v1/set/role/policies"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
 		}
-		resp, md, err := local_request_Anubis_SetRolePolicies_0(rctx, inboundMarshaler, server, req, pathParams)
+		resp, md, err := local_request_PermissionDoor_SetRolePolicies_0(rctx, inboundMarshaler, server, req, pathParams)
 		md.HeaderMD, md.TrailerMD = metadata.Join(md.HeaderMD, stream.Header()), metadata.Join(md.TrailerMD, stream.Trailer())
 		ctx = runtime.NewServerMetadataContext(ctx, md)
 		if err != nil {
@@ -386,22 +386,22 @@ func RegisterAnubisHandlerServer(ctx context.Context, mux *runtime.ServeMux, ser
 			return
 		}
 
-		forward_Anubis_SetRolePolicies_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
+		forward_PermissionDoor_SetRolePolicies_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
 
 	})
 
-	mux.Handle("POST", pattern_Anubis_AuthenticateRolePolicy_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
+	mux.Handle("POST", pattern_PermissionDoor_AuthenticateRolePolicy_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		var stream runtime.ServerTransportStream
 		ctx = grpc.NewContextWithServerTransportStream(ctx, &stream)
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		rctx, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/anubis.v1.Anubis/AuthenticateRolePolicy", runtime.WithHTTPPathPattern("/v1/authenticate/role/policy"))
+		rctx, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/permission.door.v1.PermissionDoor/AuthenticateRolePolicy", runtime.WithHTTPPathPattern("/v1/authenticate/role/policy"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
 		}
-		resp, md, err := local_request_Anubis_AuthenticateRolePolicy_0(rctx, inboundMarshaler, server, req, pathParams)
+		resp, md, err := local_request_PermissionDoor_AuthenticateRolePolicy_0(rctx, inboundMarshaler, server, req, pathParams)
 		md.HeaderMD, md.TrailerMD = metadata.Join(md.HeaderMD, stream.Header()), metadata.Join(md.TrailerMD, stream.Trailer())
 		ctx = runtime.NewServerMetadataContext(ctx, md)
 		if err != nil {
@@ -409,22 +409,22 @@ func RegisterAnubisHandlerServer(ctx context.Context, mux *runtime.ServeMux, ser
 			return
 		}
 
-		forward_Anubis_AuthenticateRolePolicy_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
+		forward_PermissionDoor_AuthenticateRolePolicy_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
 
 	})
 
-	mux.Handle("POST", pattern_Anubis_AuthenticateRolesPolicy_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
+	mux.Handle("POST", pattern_PermissionDoor_AuthenticateRolesPolicy_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		var stream runtime.ServerTransportStream
 		ctx = grpc.NewContextWithServerTransportStream(ctx, &stream)
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		rctx, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/anubis.v1.Anubis/AuthenticateRolesPolicy", runtime.WithHTTPPathPattern("/v1/authenticate/roles/policy"))
+		rctx, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/permission.door.v1.PermissionDoor/AuthenticateRolesPolicy", runtime.WithHTTPPathPattern("/v1/authenticate/roles/policy"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
 		}
-		resp, md, err := local_request_Anubis_AuthenticateRolesPolicy_0(rctx, inboundMarshaler, server, req, pathParams)
+		resp, md, err := local_request_PermissionDoor_AuthenticateRolesPolicy_0(rctx, inboundMarshaler, server, req, pathParams)
 		md.HeaderMD, md.TrailerMD = metadata.Join(md.HeaderMD, stream.Header()), metadata.Join(md.TrailerMD, stream.Trailer())
 		ctx = runtime.NewServerMetadataContext(ctx, md)
 		if err != nil {
@@ -432,22 +432,22 @@ func RegisterAnubisHandlerServer(ctx context.Context, mux *runtime.ServeMux, ser
 			return
 		}
 
-		forward_Anubis_AuthenticateRolesPolicy_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
+		forward_PermissionDoor_AuthenticateRolesPolicy_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
 
 	})
 
-	mux.Handle("POST", pattern_Anubis_GetRolePolicies_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
+	mux.Handle("POST", pattern_PermissionDoor_GetRolePolicies_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		var stream runtime.ServerTransportStream
 		ctx = grpc.NewContextWithServerTransportStream(ctx, &stream)
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		rctx, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/anubis.v1.Anubis/GetRolePolicies", runtime.WithHTTPPathPattern("/v1/get/role/policies"))
+		rctx, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/permission.door.v1.PermissionDoor/GetRolePolicies", runtime.WithHTTPPathPattern("/v1/get/role/policies"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
 		}
-		resp, md, err := local_request_Anubis_GetRolePolicies_0(rctx, inboundMarshaler, server, req, pathParams)
+		resp, md, err := local_request_PermissionDoor_GetRolePolicies_0(rctx, inboundMarshaler, server, req, pathParams)
 		md.HeaderMD, md.TrailerMD = metadata.Join(md.HeaderMD, stream.Header()), metadata.Join(md.TrailerMD, stream.Trailer())
 		ctx = runtime.NewServerMetadataContext(ctx, md)
 		if err != nil {
@@ -455,22 +455,22 @@ func RegisterAnubisHandlerServer(ctx context.Context, mux *runtime.ServeMux, ser
 			return
 		}
 
-		forward_Anubis_GetRolePolicies_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
+		forward_PermissionDoor_GetRolePolicies_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
 
 	})
 
-	mux.Handle("POST", pattern_Anubis_UnsetRolePolicies_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
+	mux.Handle("POST", pattern_PermissionDoor_UnsetRolePolicies_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		var stream runtime.ServerTransportStream
 		ctx = grpc.NewContextWithServerTransportStream(ctx, &stream)
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		rctx, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/anubis.v1.Anubis/UnsetRolePolicies", runtime.WithHTTPPathPattern("/v1/unset/role/policies"))
+		rctx, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/permission.door.v1.PermissionDoor/UnsetRolePolicies", runtime.WithHTTPPathPattern("/v1/unset/role/policies"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
 		}
-		resp, md, err := local_request_Anubis_UnsetRolePolicies_0(rctx, inboundMarshaler, server, req, pathParams)
+		resp, md, err := local_request_PermissionDoor_UnsetRolePolicies_0(rctx, inboundMarshaler, server, req, pathParams)
 		md.HeaderMD, md.TrailerMD = metadata.Join(md.HeaderMD, stream.Header()), metadata.Join(md.TrailerMD, stream.Trailer())
 		ctx = runtime.NewServerMetadataContext(ctx, md)
 		if err != nil {
@@ -478,22 +478,22 @@ func RegisterAnubisHandlerServer(ctx context.Context, mux *runtime.ServeMux, ser
 			return
 		}
 
-		forward_Anubis_UnsetRolePolicies_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
+		forward_PermissionDoor_UnsetRolePolicies_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
 
 	})
 
-	mux.Handle("POST", pattern_Anubis_DeleteRole_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
+	mux.Handle("POST", pattern_PermissionDoor_DeleteRole_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		var stream runtime.ServerTransportStream
 		ctx = grpc.NewContextWithServerTransportStream(ctx, &stream)
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		rctx, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/anubis.v1.Anubis/DeleteRole", runtime.WithHTTPPathPattern("/v1/delete/role"))
+		rctx, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/permission.door.v1.PermissionDoor/DeleteRole", runtime.WithHTTPPathPattern("/v1/delete/role"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
 		}
-		resp, md, err := local_request_Anubis_DeleteRole_0(rctx, inboundMarshaler, server, req, pathParams)
+		resp, md, err := local_request_PermissionDoor_DeleteRole_0(rctx, inboundMarshaler, server, req, pathParams)
 		md.HeaderMD, md.TrailerMD = metadata.Join(md.HeaderMD, stream.Header()), metadata.Join(md.TrailerMD, stream.Trailer())
 		ctx = runtime.NewServerMetadataContext(ctx, md)
 		if err != nil {
@@ -501,22 +501,22 @@ func RegisterAnubisHandlerServer(ctx context.Context, mux *runtime.ServeMux, ser
 			return
 		}
 
-		forward_Anubis_DeleteRole_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
+		forward_PermissionDoor_DeleteRole_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
 
 	})
 
-	mux.Handle("POST", pattern_Anubis_DeleteResource_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
+	mux.Handle("POST", pattern_PermissionDoor_DeleteResource_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		var stream runtime.ServerTransportStream
 		ctx = grpc.NewContextWithServerTransportStream(ctx, &stream)
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		rctx, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/anubis.v1.Anubis/DeleteResource", runtime.WithHTTPPathPattern("/v1/delete/resource"))
+		rctx, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/permission.door.v1.PermissionDoor/DeleteResource", runtime.WithHTTPPathPattern("/v1/delete/resource"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
 		}
-		resp, md, err := local_request_Anubis_DeleteResource_0(rctx, inboundMarshaler, server, req, pathParams)
+		resp, md, err := local_request_PermissionDoor_DeleteResource_0(rctx, inboundMarshaler, server, req, pathParams)
 		md.HeaderMD, md.TrailerMD = metadata.Join(md.HeaderMD, stream.Header()), metadata.Join(md.TrailerMD, stream.Trailer())
 		ctx = runtime.NewServerMetadataContext(ctx, md)
 		if err != nil {
@@ -524,22 +524,22 @@ func RegisterAnubisHandlerServer(ctx context.Context, mux *runtime.ServeMux, ser
 			return
 		}
 
-		forward_Anubis_DeleteResource_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
+		forward_PermissionDoor_DeleteResource_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
 
 	})
 
-	mux.Handle("POST", pattern_Anubis_AuthenticateUserPolicyByID_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
+	mux.Handle("POST", pattern_PermissionDoor_AuthenticateUserPolicyByID_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		var stream runtime.ServerTransportStream
 		ctx = grpc.NewContextWithServerTransportStream(ctx, &stream)
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		rctx, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/anubis.v1.Anubis/AuthenticateUserPolicyByID", runtime.WithHTTPPathPattern("/v1/authenticate/user/policy/by/id"))
+		rctx, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/permission.door.v1.PermissionDoor/AuthenticateUserPolicyByID", runtime.WithHTTPPathPattern("/v1/authenticate/user/policy/by/id"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
 		}
-		resp, md, err := local_request_Anubis_AuthenticateUserPolicyByID_0(rctx, inboundMarshaler, server, req, pathParams)
+		resp, md, err := local_request_PermissionDoor_AuthenticateUserPolicyByID_0(rctx, inboundMarshaler, server, req, pathParams)
 		md.HeaderMD, md.TrailerMD = metadata.Join(md.HeaderMD, stream.Header()), metadata.Join(md.TrailerMD, stream.Trailer())
 		ctx = runtime.NewServerMetadataContext(ctx, md)
 		if err != nil {
@@ -547,16 +547,16 @@ func RegisterAnubisHandlerServer(ctx context.Context, mux *runtime.ServeMux, ser
 			return
 		}
 
-		forward_Anubis_AuthenticateUserPolicyByID_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
+		forward_PermissionDoor_AuthenticateUserPolicyByID_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
 
 	})
 
 	return nil
 }
 
-// RegisterAnubisHandlerFromEndpoint is same as RegisterAnubisHandler but
+// RegisterPermissionDoorHandlerFromEndpoint is same as RegisterPermissionDoorHandler but
 // automatically dials to "endpoint" and closes the connection when "ctx" gets done.
-func RegisterAnubisHandlerFromEndpoint(ctx context.Context, mux *runtime.ServeMux, endpoint string, opts []grpc.DialOption) (err error) {
+func RegisterPermissionDoorHandlerFromEndpoint(ctx context.Context, mux *runtime.ServeMux, endpoint string, opts []grpc.DialOption) (err error) {
 	conn, err := grpc.Dial(endpoint, opts...)
 	if err != nil {
 		return err
@@ -576,199 +576,199 @@ func RegisterAnubisHandlerFromEndpoint(ctx context.Context, mux *runtime.ServeMu
 		}()
 	}()
 
-	return RegisterAnubisHandler(ctx, mux, conn)
+	return RegisterPermissionDoorHandler(ctx, mux, conn)
 }
 
-// RegisterAnubisHandler registers the http handlers for service Anubis to "mux".
+// RegisterPermissionDoorHandler registers the http handlers for service PermissionDoor to "mux".
 // The handlers forward requests to the grpc endpoint over "conn".
-func RegisterAnubisHandler(ctx context.Context, mux *runtime.ServeMux, conn *grpc.ClientConn) error {
-	return RegisterAnubisHandlerClient(ctx, mux, NewAnubisClient(conn))
+func RegisterPermissionDoorHandler(ctx context.Context, mux *runtime.ServeMux, conn *grpc.ClientConn) error {
+	return RegisterPermissionDoorHandlerClient(ctx, mux, NewPermissionDoorClient(conn))
 }
 
-// RegisterAnubisHandlerClient registers the http handlers for service Anubis
-// to "mux". The handlers forward requests to the grpc endpoint over the given implementation of "AnubisClient".
-// Note: the gRPC framework executes interceptors within the gRPC handler. If the passed in "AnubisClient"
+// RegisterPermissionDoorHandlerClient registers the http handlers for service PermissionDoor
+// to "mux". The handlers forward requests to the grpc endpoint over the given implementation of "PermissionDoorClient".
+// Note: the gRPC framework executes interceptors within the gRPC handler. If the passed in "PermissionDoorClient"
 // doesn't go through the normal gRPC flow (creating a gRPC client etc.) then it will be up to the passed in
-// "AnubisClient" to call the correct interceptors.
-func RegisterAnubisHandlerClient(ctx context.Context, mux *runtime.ServeMux, client AnubisClient) error {
+// "PermissionDoorClient" to call the correct interceptors.
+func RegisterPermissionDoorHandlerClient(ctx context.Context, mux *runtime.ServeMux, client PermissionDoorClient) error {
 
-	mux.Handle("POST", pattern_Anubis_Version_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
+	mux.Handle("POST", pattern_PermissionDoor_Version_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		rctx, err := runtime.AnnotateContext(ctx, mux, req, "/anubis.v1.Anubis/Version", runtime.WithHTTPPathPattern("/version"))
+		rctx, err := runtime.AnnotateContext(ctx, mux, req, "/permission.door.v1.PermissionDoor/Version", runtime.WithHTTPPathPattern("/version"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
 		}
-		resp, md, err := request_Anubis_Version_0(rctx, inboundMarshaler, client, req, pathParams)
+		resp, md, err := request_PermissionDoor_Version_0(rctx, inboundMarshaler, client, req, pathParams)
 		ctx = runtime.NewServerMetadataContext(ctx, md)
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
 		}
 
-		forward_Anubis_Version_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
+		forward_PermissionDoor_Version_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
 
 	})
 
-	mux.Handle("POST", pattern_Anubis_SetRolePolicies_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
+	mux.Handle("POST", pattern_PermissionDoor_SetRolePolicies_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		rctx, err := runtime.AnnotateContext(ctx, mux, req, "/anubis.v1.Anubis/SetRolePolicies", runtime.WithHTTPPathPattern("/v1/set/role/policies"))
+		rctx, err := runtime.AnnotateContext(ctx, mux, req, "/permission.door.v1.PermissionDoor/SetRolePolicies", runtime.WithHTTPPathPattern("/v1/set/role/policies"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
 		}
-		resp, md, err := request_Anubis_SetRolePolicies_0(rctx, inboundMarshaler, client, req, pathParams)
+		resp, md, err := request_PermissionDoor_SetRolePolicies_0(rctx, inboundMarshaler, client, req, pathParams)
 		ctx = runtime.NewServerMetadataContext(ctx, md)
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
 		}
 
-		forward_Anubis_SetRolePolicies_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
+		forward_PermissionDoor_SetRolePolicies_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
 
 	})
 
-	mux.Handle("POST", pattern_Anubis_AuthenticateRolePolicy_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
+	mux.Handle("POST", pattern_PermissionDoor_AuthenticateRolePolicy_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		rctx, err := runtime.AnnotateContext(ctx, mux, req, "/anubis.v1.Anubis/AuthenticateRolePolicy", runtime.WithHTTPPathPattern("/v1/authenticate/role/policy"))
+		rctx, err := runtime.AnnotateContext(ctx, mux, req, "/permission.door.v1.PermissionDoor/AuthenticateRolePolicy", runtime.WithHTTPPathPattern("/v1/authenticate/role/policy"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
 		}
-		resp, md, err := request_Anubis_AuthenticateRolePolicy_0(rctx, inboundMarshaler, client, req, pathParams)
+		resp, md, err := request_PermissionDoor_AuthenticateRolePolicy_0(rctx, inboundMarshaler, client, req, pathParams)
 		ctx = runtime.NewServerMetadataContext(ctx, md)
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
 		}
 
-		forward_Anubis_AuthenticateRolePolicy_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
+		forward_PermissionDoor_AuthenticateRolePolicy_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
 
 	})
 
-	mux.Handle("POST", pattern_Anubis_AuthenticateRolesPolicy_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
+	mux.Handle("POST", pattern_PermissionDoor_AuthenticateRolesPolicy_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		rctx, err := runtime.AnnotateContext(ctx, mux, req, "/anubis.v1.Anubis/AuthenticateRolesPolicy", runtime.WithHTTPPathPattern("/v1/authenticate/roles/policy"))
+		rctx, err := runtime.AnnotateContext(ctx, mux, req, "/permission.door.v1.PermissionDoor/AuthenticateRolesPolicy", runtime.WithHTTPPathPattern("/v1/authenticate/roles/policy"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
 		}
-		resp, md, err := request_Anubis_AuthenticateRolesPolicy_0(rctx, inboundMarshaler, client, req, pathParams)
+		resp, md, err := request_PermissionDoor_AuthenticateRolesPolicy_0(rctx, inboundMarshaler, client, req, pathParams)
 		ctx = runtime.NewServerMetadataContext(ctx, md)
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
 		}
 
-		forward_Anubis_AuthenticateRolesPolicy_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
+		forward_PermissionDoor_AuthenticateRolesPolicy_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
 
 	})
 
-	mux.Handle("POST", pattern_Anubis_GetRolePolicies_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
+	mux.Handle("POST", pattern_PermissionDoor_GetRolePolicies_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		rctx, err := runtime.AnnotateContext(ctx, mux, req, "/anubis.v1.Anubis/GetRolePolicies", runtime.WithHTTPPathPattern("/v1/get/role/policies"))
+		rctx, err := runtime.AnnotateContext(ctx, mux, req, "/permission.door.v1.PermissionDoor/GetRolePolicies", runtime.WithHTTPPathPattern("/v1/get/role/policies"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
 		}
-		resp, md, err := request_Anubis_GetRolePolicies_0(rctx, inboundMarshaler, client, req, pathParams)
+		resp, md, err := request_PermissionDoor_GetRolePolicies_0(rctx, inboundMarshaler, client, req, pathParams)
 		ctx = runtime.NewServerMetadataContext(ctx, md)
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
 		}
 
-		forward_Anubis_GetRolePolicies_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
+		forward_PermissionDoor_GetRolePolicies_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
 
 	})
 
-	mux.Handle("POST", pattern_Anubis_UnsetRolePolicies_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
+	mux.Handle("POST", pattern_PermissionDoor_UnsetRolePolicies_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		rctx, err := runtime.AnnotateContext(ctx, mux, req, "/anubis.v1.Anubis/UnsetRolePolicies", runtime.WithHTTPPathPattern("/v1/unset/role/policies"))
+		rctx, err := runtime.AnnotateContext(ctx, mux, req, "/permission.door.v1.PermissionDoor/UnsetRolePolicies", runtime.WithHTTPPathPattern("/v1/unset/role/policies"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
 		}
-		resp, md, err := request_Anubis_UnsetRolePolicies_0(rctx, inboundMarshaler, client, req, pathParams)
+		resp, md, err := request_PermissionDoor_UnsetRolePolicies_0(rctx, inboundMarshaler, client, req, pathParams)
 		ctx = runtime.NewServerMetadataContext(ctx, md)
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
 		}
 
-		forward_Anubis_UnsetRolePolicies_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
+		forward_PermissionDoor_UnsetRolePolicies_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
 
 	})
 
-	mux.Handle("POST", pattern_Anubis_DeleteRole_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
+	mux.Handle("POST", pattern_PermissionDoor_DeleteRole_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		rctx, err := runtime.AnnotateContext(ctx, mux, req, "/anubis.v1.Anubis/DeleteRole", runtime.WithHTTPPathPattern("/v1/delete/role"))
+		rctx, err := runtime.AnnotateContext(ctx, mux, req, "/permission.door.v1.PermissionDoor/DeleteRole", runtime.WithHTTPPathPattern("/v1/delete/role"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
 		}
-		resp, md, err := request_Anubis_DeleteRole_0(rctx, inboundMarshaler, client, req, pathParams)
+		resp, md, err := request_PermissionDoor_DeleteRole_0(rctx, inboundMarshaler, client, req, pathParams)
 		ctx = runtime.NewServerMetadataContext(ctx, md)
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
 		}
 
-		forward_Anubis_DeleteRole_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
+		forward_PermissionDoor_DeleteRole_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
 
 	})
 
-	mux.Handle("POST", pattern_Anubis_DeleteResource_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
+	mux.Handle("POST", pattern_PermissionDoor_DeleteResource_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		rctx, err := runtime.AnnotateContext(ctx, mux, req, "/anubis.v1.Anubis/DeleteResource", runtime.WithHTTPPathPattern("/v1/delete/resource"))
+		rctx, err := runtime.AnnotateContext(ctx, mux, req, "/permission.door.v1.PermissionDoor/DeleteResource", runtime.WithHTTPPathPattern("/v1/delete/resource"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
 		}
-		resp, md, err := request_Anubis_DeleteResource_0(rctx, inboundMarshaler, client, req, pathParams)
+		resp, md, err := request_PermissionDoor_DeleteResource_0(rctx, inboundMarshaler, client, req, pathParams)
 		ctx = runtime.NewServerMetadataContext(ctx, md)
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
 		}
 
-		forward_Anubis_DeleteResource_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
+		forward_PermissionDoor_DeleteResource_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
 
 	})
 
-	mux.Handle("POST", pattern_Anubis_AuthenticateUserPolicyByID_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
+	mux.Handle("POST", pattern_PermissionDoor_AuthenticateUserPolicyByID_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		rctx, err := runtime.AnnotateContext(ctx, mux, req, "/anubis.v1.Anubis/AuthenticateUserPolicyByID", runtime.WithHTTPPathPattern("/v1/authenticate/user/policy/by/id"))
+		rctx, err := runtime.AnnotateContext(ctx, mux, req, "/permission.door.v1.PermissionDoor/AuthenticateUserPolicyByID", runtime.WithHTTPPathPattern("/v1/authenticate/user/policy/by/id"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
 		}
-		resp, md, err := request_Anubis_AuthenticateUserPolicyByID_0(rctx, inboundMarshaler, client, req, pathParams)
+		resp, md, err := request_PermissionDoor_AuthenticateUserPolicyByID_0(rctx, inboundMarshaler, client, req, pathParams)
 		ctx = runtime.NewServerMetadataContext(ctx, md)
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
 		}
 
-		forward_Anubis_AuthenticateUserPolicyByID_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
+		forward_PermissionDoor_AuthenticateUserPolicyByID_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
 
 	})
 
@@ -776,41 +776,41 @@ func RegisterAnubisHandlerClient(ctx context.Context, mux *runtime.ServeMux, cli
 }
 
 var (
-	pattern_Anubis_Version_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0}, []string{"version"}, ""))
+	pattern_PermissionDoor_Version_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0}, []string{"version"}, ""))
 
-	pattern_Anubis_SetRolePolicies_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3}, []string{"v1", "set", "role", "policies"}, ""))
+	pattern_PermissionDoor_SetRolePolicies_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3}, []string{"v1", "set", "role", "policies"}, ""))
 
-	pattern_Anubis_AuthenticateRolePolicy_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3}, []string{"v1", "authenticate", "role", "policy"}, ""))
+	pattern_PermissionDoor_AuthenticateRolePolicy_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3}, []string{"v1", "authenticate", "role", "policy"}, ""))
 
-	pattern_Anubis_AuthenticateRolesPolicy_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3}, []string{"v1", "authenticate", "roles", "policy"}, ""))
+	pattern_PermissionDoor_AuthenticateRolesPolicy_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3}, []string{"v1", "authenticate", "roles", "policy"}, ""))
 
-	pattern_Anubis_GetRolePolicies_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3}, []string{"v1", "get", "role", "policies"}, ""))
+	pattern_PermissionDoor_GetRolePolicies_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3}, []string{"v1", "get", "role", "policies"}, ""))
 
-	pattern_Anubis_UnsetRolePolicies_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3}, []string{"v1", "unset", "role", "policies"}, ""))
+	pattern_PermissionDoor_UnsetRolePolicies_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3}, []string{"v1", "unset", "role", "policies"}, ""))
 
-	pattern_Anubis_DeleteRole_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2}, []string{"v1", "delete", "role"}, ""))
+	pattern_PermissionDoor_DeleteRole_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2}, []string{"v1", "delete", "role"}, ""))
 
-	pattern_Anubis_DeleteResource_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2}, []string{"v1", "delete", "resource"}, ""))
+	pattern_PermissionDoor_DeleteResource_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2}, []string{"v1", "delete", "resource"}, ""))
 
-	pattern_Anubis_AuthenticateUserPolicyByID_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3, 2, 4, 2, 5}, []string{"v1", "authenticate", "user", "policy", "by", "id"}, ""))
+	pattern_PermissionDoor_AuthenticateUserPolicyByID_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3, 2, 4, 2, 5}, []string{"v1", "authenticate", "user", "policy", "by", "id"}, ""))
 )
 
 var (
-	forward_Anubis_Version_0 = runtime.ForwardResponseMessage
+	forward_PermissionDoor_Version_0 = runtime.ForwardResponseMessage
 
-	forward_Anubis_SetRolePolicies_0 = runtime.ForwardResponseMessage
+	forward_PermissionDoor_SetRolePolicies_0 = runtime.ForwardResponseMessage
 
-	forward_Anubis_AuthenticateRolePolicy_0 = runtime.ForwardResponseMessage
+	forward_PermissionDoor_AuthenticateRolePolicy_0 = runtime.ForwardResponseMessage
 
-	forward_Anubis_AuthenticateRolesPolicy_0 = runtime.ForwardResponseMessage
+	forward_PermissionDoor_AuthenticateRolesPolicy_0 = runtime.ForwardResponseMessage
 
-	forward_Anubis_GetRolePolicies_0 = runtime.ForwardResponseMessage
+	forward_PermissionDoor_GetRolePolicies_0 = runtime.ForwardResponseMessage
 
-	forward_Anubis_UnsetRolePolicies_0 = runtime.ForwardResponseMessage
+	forward_PermissionDoor_UnsetRolePolicies_0 = runtime.ForwardResponseMessage
 
-	forward_Anubis_DeleteRole_0 = runtime.ForwardResponseMessage
+	forward_PermissionDoor_DeleteRole_0 = runtime.ForwardResponseMessage
 
-	forward_Anubis_DeleteResource_0 = runtime.ForwardResponseMessage
+	forward_PermissionDoor_DeleteResource_0 = runtime.ForwardResponseMessage
 
-	forward_Anubis_AuthenticateUserPolicyByID_0 = runtime.ForwardResponseMessage
+	forward_PermissionDoor_AuthenticateUserPolicyByID_0 = runtime.ForwardResponseMessage
 )
