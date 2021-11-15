@@ -59,7 +59,7 @@ service Anubis {
     /*
     Cancel some policies of role.
     */
-    rpc UnsetRolePolicies (UnsetRolePoliciesRequest) returns (google.protobuf.Empty) {
+    rpc UnsetRolePolicies (UnsetRolePoliciesRequest) returns (UnsetRolePoliciesResponse) {
         option (google.api.http) = {
             post: "/v1/unset/role/policies"
             body: "*"
@@ -77,19 +77,20 @@ service Anubis {
     /*
     Delete resources.
     */
-    rpc DeleteResource (DeleteResourceRequest) returns (google.protobuf.Empty) {
+    rpc DeleteResource (DeleteResourceRequest) returns (DeleteResourceResponse) {
         option (google.api.http) = {
             post: "/v1/delete/resource"
             body: "*"
         };
     };
+    rpc AuthenticateUserPolicyByID (AuthenticateUserPolicyByIDRequest) returns (AuthenticateUserPolicyByIDResponse) {
+        option (google.api.http) = {
+            post: "/v1/authenticate/user/policy/by/id"
+            body: "*"
+        };
+    };
 }
 
-// message StringMessage {
-//     string value = 100;
-// }
-
-// request body and response
 message VersionResponse {
     string Info = 100;
 }
@@ -132,8 +133,8 @@ message GetRolePoliciesRequest {
 
 message RolePolicies {
     repeated ResourcePolicy Policies = 1;
-        string RoleId = 2;
-        string AppId = 3;
+    string RoleId = 2;
+    string AppId = 3;
 }
 
 message GetRolePoliciesResponse {
@@ -160,9 +161,17 @@ message UnsetRolePoliciesRequest {
     repeated ResourcePolicy Policies = 3;
 }
 
+message UnsetRolePoliciesResponse {
+    string Info = 1;
+}
+
 message DeleteRoleRequest {
     string AppId = 1;
     repeated string RoleIds = 2;
+}
+
+message DeleteResourceResponse {
+    string Info = 1;
 }
 
 message Policy {
@@ -179,4 +188,15 @@ message DeleteRoleResponse {
 message DeleteResourceRequest {
     string AppId = 1;
     repeated string ResourceIds = 2;
+}
+
+message AuthenticateUserPolicyByIDRequest {
+    string UserID = 1;
+    string AppID = 2;
+    string ResourecID = 3;
+    string Action = 4;
+}
+
+message AuthenticateUserPolicyByIDResponse {
+    string Info = 1;
 }

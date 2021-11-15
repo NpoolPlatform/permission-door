@@ -1,0 +1,28 @@
+package user
+
+import (
+	"context"
+
+	"github.com/poolPlatform/permission-door/message/npool"
+	"github.com/poolPlatform/permission-door/pkg/casbin"
+	"github.com/poolPlatform/permission-door/pkg/grpc"
+	"golang.org/x/xerrors"
+)
+
+func AuthenticateUserPolicyByID(ctx context.Context, in *npool.AuthenticateUserPolicyByIDRequest) (*npool.AuthenticateUserPolicyByIDResponse, error) {
+	resp, err := grpc.GetUserRoleIDs(in.UserID, in.AppID)
+	if err != nil {
+		return nil, xerrors.Errorf("fail to get user role: %v", err)
+	}
+
+	for _, role := range resp {
+		ok, err := casbin.Enforcer().Enforce(role, in.AppID, in.ResourecID, in.Action)
+		if err != nil || !ok {
+			continue
+		}
+		return &npool.AuthenticateUserPolicyByIDResponse{
+			Info: "ok",
+		}, nil
+	}
+	return nil, xerrors.Errorf("user has no permission")
+}

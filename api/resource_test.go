@@ -7,6 +7,7 @@ import (
 	"testing"
 
 	"github.com/go-resty/resty/v2"
+	"github.com/google/uuid"
 	"github.com/poolPlatform/permission-door/message/npool"
 	"github.com/stretchr/testify/assert"
 )
@@ -17,64 +18,38 @@ func TestDeleteResource(t *testing.T) {
 		return
 	}
 
+	appID := uuid.New().String()
+	roleID := uuid.New().String()
+
 	fmt.Println("start set policy")
 	cli := resty.New()
 	resp, err := cli.R().
 		SetHeader("Content-Type", "application/json").
 		SetBody(npool.SetRolePoliciesRequest{
-			AppId:  "123456789",
-			RoleId: "123",
+			AppId:  appID,
+			RoleId: roleID,
 			ResourcePolicies: []*npool.ResourcePolicy{
 				{ResourceId: "1", Action: "get"},
 				{ResourceId: "2", Action: "post"},
 				{ResourceId: "3", Action: "delete"},
 				{ResourceId: "4", Action: "patch"},
 			},
-		}).Post("http://localhost:32759/v1/set/role/policies")
-	assert.Nil(t, err)
-	assert.Equal(t, 200, resp.StatusCode())
-
-	// delete resource with wrong ResourceId.
-	fmt.Println("delete resource with wrong ResourceId.")
-	resp, err = cli.R().
-		SetHeader("Content-Type", "application/json").
-		SetBody(npool.DeleteResourceRequest{
-			AppId:       "123456789",
-			ResourceIds: []string{"12345"},
-		}).Post("http://localhost:32759/v1/delete/resource")
-	assert.Nil(t, err)
-	assert.NotEqual(t, 200, resp.StatusCode())
-
-	// delete resource with wrong AppId.
-	fmt.Println("delete resource with wrong AppId.")
-	resp, err = cli.R().
-		SetHeader("Content-Type", "application/json").
-		SetBody(npool.DeleteResourceRequest{
-			AppId:       "1234567890",
-			ResourceIds: []string{"1"},
-		}).Post("http://localhost:32759/v1/delete/resource")
-	assert.Nil(t, err)
-	assert.NotEqual(t, 200, resp.StatusCode())
-
-	// delete resource with wrong params.
-	fmt.Println("delete resource with wrong params.")
-	resp, err = cli.R().
-		SetHeader("Content-Type", "application/json").
-		SetBody(npool.DeleteResourceRequest{
-			AppId:       "1234567890",
-			ResourceIds: []string{"12345"},
-		}).Post("http://localhost:32759/v1/delete/resource")
-	assert.Nil(t, err)
-	assert.NotEqual(t, 200, resp.StatusCode())
+		}).Post("http://localhost:50100/v1/set/role/policies")
+	if assert.Nil(t, err) {
+		fmt.Println("set resp is", resp)
+		assert.Equal(t, 200, resp.StatusCode())
+	}
 
 	// delete resource with correct params.
 	fmt.Println("delete resource with correct params.")
 	resp, err = cli.R().
 		SetHeader("Content-Type", "application/json").
 		SetBody(npool.DeleteResourceRequest{
-			AppId:       "123456789",
+			AppId:       appID,
 			ResourceIds: []string{"1"},
-		}).Post("http://localhost:32759/v1/delete/resource")
-	assert.Nil(t, err)
-	assert.Equal(t, 200, resp.StatusCode())
+		}).Post("http://localhost:50100/v1/delete/resource")
+	if assert.Nil(t, err) {
+		fmt.Println("delete resp is", resp)
+		assert.Equal(t, 200, resp.StatusCode())
+	}
 }

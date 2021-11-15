@@ -8,7 +8,10 @@
     - [AuthenticateRolePolicyResponse](#anubis.v1.AuthenticateRolePolicyResponse)
     - [AuthenticateRolesPolicyRequest](#anubis.v1.AuthenticateRolesPolicyRequest)
     - [AuthenticateRolesPolicyResponse](#anubis.v1.AuthenticateRolesPolicyResponse)
+    - [AuthenticateUserPolicyByIDRequest](#anubis.v1.AuthenticateUserPolicyByIDRequest)
+    - [AuthenticateUserPolicyByIDResponse](#anubis.v1.AuthenticateUserPolicyByIDResponse)
     - [DeleteResourceRequest](#anubis.v1.DeleteResourceRequest)
+    - [DeleteResourceResponse](#anubis.v1.DeleteResourceResponse)
     - [DeleteRoleRequest](#anubis.v1.DeleteRoleRequest)
     - [DeleteRoleResponse](#anubis.v1.DeleteRoleResponse)
     - [GetRolePoliciesRequest](#anubis.v1.GetRolePoliciesRequest)
@@ -21,6 +24,7 @@
     - [SetRolePoliciesRequest](#anubis.v1.SetRolePoliciesRequest)
     - [SetRolePoliciesResponse](#anubis.v1.SetRolePoliciesResponse)
     - [UnsetRolePoliciesRequest](#anubis.v1.UnsetRolePoliciesRequest)
+    - [UnsetRolePoliciesResponse](#anubis.v1.UnsetRolePoliciesResponse)
     - [VersionResponse](#anubis.v1.VersionResponse)
   
     - [Anubis](#anubis.v1.Anubis)
@@ -100,6 +104,39 @@
 
 
 
+<a name="anubis.v1.AuthenticateUserPolicyByIDRequest"></a>
+
+### AuthenticateUserPolicyByIDRequest
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| UserID | [string](#string) |  |  |
+| AppID | [string](#string) |  |  |
+| ResourecID | [string](#string) |  |  |
+| Action | [string](#string) |  |  |
+
+
+
+
+
+
+<a name="anubis.v1.AuthenticateUserPolicyByIDResponse"></a>
+
+### AuthenticateUserPolicyByIDResponse
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| Info | [string](#string) |  |  |
+
+
+
+
+
+
 <a name="anubis.v1.DeleteResourceRequest"></a>
 
 ### DeleteResourceRequest
@@ -110,6 +147,21 @@
 | ----- | ---- | ----- | ----------- |
 | AppId | [string](#string) |  |  |
 | ResourceIds | [string](#string) | repeated |  |
+
+
+
+
+
+
+<a name="anubis.v1.DeleteResourceResponse"></a>
+
+### DeleteResourceResponse
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| Info | [string](#string) |  |  |
 
 
 
@@ -310,10 +362,25 @@
 
 
 
+<a name="anubis.v1.UnsetRolePoliciesResponse"></a>
+
+### UnsetRolePoliciesResponse
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| Info | [string](#string) |  |  |
+
+
+
+
+
+
 <a name="anubis.v1.VersionResponse"></a>
 
 ### VersionResponse
-request body and response
+
 
 
 | Field | Type | Label | Description |
@@ -348,9 +415,10 @@ rpc Echo (StringMessage) returns (StringMessage){
 | AuthenticateRolePolicy | [AuthenticateRolePolicyRequest](#anubis.v1.AuthenticateRolePolicyRequest) | [AuthenticateRolePolicyResponse](#anubis.v1.AuthenticateRolePolicyResponse) | Authenticate Role permission. |
 | AuthenticateRolesPolicy | [AuthenticateRolesPolicyRequest](#anubis.v1.AuthenticateRolesPolicyRequest) | [AuthenticateRolesPolicyResponse](#anubis.v1.AuthenticateRolesPolicyResponse) |  |
 | GetRolePolicies | [GetRolePoliciesRequest](#anubis.v1.GetRolePoliciesRequest) | [GetRolePoliciesResponse](#anubis.v1.GetRolePoliciesResponse) | Get all policies of role. |
-| UnsetRolePolicies | [UnsetRolePoliciesRequest](#anubis.v1.UnsetRolePoliciesRequest) | [.google.protobuf.Empty](#google.protobuf.Empty) | Cancel some policies of role. |
+| UnsetRolePolicies | [UnsetRolePoliciesRequest](#anubis.v1.UnsetRolePoliciesRequest) | [UnsetRolePoliciesResponse](#anubis.v1.UnsetRolePoliciesResponse) | Cancel some policies of role. |
 | DeleteRole | [DeleteRoleRequest](#anubis.v1.DeleteRoleRequest) | [DeleteRoleResponse](#anubis.v1.DeleteRoleResponse) | Delete data of role. |
-| DeleteResource | [DeleteResourceRequest](#anubis.v1.DeleteResourceRequest) | [.google.protobuf.Empty](#google.protobuf.Empty) | Delete resources. |
+| DeleteResource | [DeleteResourceRequest](#anubis.v1.DeleteResourceRequest) | [DeleteResourceResponse](#anubis.v1.DeleteResourceResponse) | Delete resources. |
+| AuthenticateUserPolicyByID | [AuthenticateUserPolicyByIDRequest](#anubis.v1.AuthenticateUserPolicyByIDRequest) | [AuthenticateUserPolicyByIDResponse](#anubis.v1.AuthenticateUserPolicyByIDResponse) |  |
 
  
 

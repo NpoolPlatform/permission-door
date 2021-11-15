@@ -33,13 +33,14 @@ type AnubisClient interface {
 	GetRolePolicies(ctx context.Context, in *GetRolePoliciesRequest, opts ...grpc.CallOption) (*GetRolePoliciesResponse, error)
 	//
 	//Cancel some policies of role.
-	UnsetRolePolicies(ctx context.Context, in *UnsetRolePoliciesRequest, opts ...grpc.CallOption) (*emptypb.Empty, error)
+	UnsetRolePolicies(ctx context.Context, in *UnsetRolePoliciesRequest, opts ...grpc.CallOption) (*UnsetRolePoliciesResponse, error)
 	//
 	//Delete data of role.
 	DeleteRole(ctx context.Context, in *DeleteRoleRequest, opts ...grpc.CallOption) (*DeleteRoleResponse, error)
 	//
 	//Delete resources.
-	DeleteResource(ctx context.Context, in *DeleteResourceRequest, opts ...grpc.CallOption) (*emptypb.Empty, error)
+	DeleteResource(ctx context.Context, in *DeleteResourceRequest, opts ...grpc.CallOption) (*DeleteResourceResponse, error)
+	AuthenticateUserPolicyByID(ctx context.Context, in *AuthenticateUserPolicyByIDRequest, opts ...grpc.CallOption) (*AuthenticateUserPolicyByIDResponse, error)
 }
 
 type anubisClient struct {
@@ -95,8 +96,8 @@ func (c *anubisClient) GetRolePolicies(ctx context.Context, in *GetRolePoliciesR
 	return out, nil
 }
 
-func (c *anubisClient) UnsetRolePolicies(ctx context.Context, in *UnsetRolePoliciesRequest, opts ...grpc.CallOption) (*emptypb.Empty, error) {
-	out := new(emptypb.Empty)
+func (c *anubisClient) UnsetRolePolicies(ctx context.Context, in *UnsetRolePoliciesRequest, opts ...grpc.CallOption) (*UnsetRolePoliciesResponse, error) {
+	out := new(UnsetRolePoliciesResponse)
 	err := c.cc.Invoke(ctx, "/anubis.v1.Anubis/UnsetRolePolicies", in, out, opts...)
 	if err != nil {
 		return nil, err
@@ -113,9 +114,18 @@ func (c *anubisClient) DeleteRole(ctx context.Context, in *DeleteRoleRequest, op
 	return out, nil
 }
 
-func (c *anubisClient) DeleteResource(ctx context.Context, in *DeleteResourceRequest, opts ...grpc.CallOption) (*emptypb.Empty, error) {
-	out := new(emptypb.Empty)
+func (c *anubisClient) DeleteResource(ctx context.Context, in *DeleteResourceRequest, opts ...grpc.CallOption) (*DeleteResourceResponse, error) {
+	out := new(DeleteResourceResponse)
 	err := c.cc.Invoke(ctx, "/anubis.v1.Anubis/DeleteResource", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *anubisClient) AuthenticateUserPolicyByID(ctx context.Context, in *AuthenticateUserPolicyByIDRequest, opts ...grpc.CallOption) (*AuthenticateUserPolicyByIDResponse, error) {
+	out := new(AuthenticateUserPolicyByIDResponse)
+	err := c.cc.Invoke(ctx, "/anubis.v1.Anubis/AuthenticateUserPolicyByID", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -140,13 +150,14 @@ type AnubisServer interface {
 	GetRolePolicies(context.Context, *GetRolePoliciesRequest) (*GetRolePoliciesResponse, error)
 	//
 	//Cancel some policies of role.
-	UnsetRolePolicies(context.Context, *UnsetRolePoliciesRequest) (*emptypb.Empty, error)
+	UnsetRolePolicies(context.Context, *UnsetRolePoliciesRequest) (*UnsetRolePoliciesResponse, error)
 	//
 	//Delete data of role.
 	DeleteRole(context.Context, *DeleteRoleRequest) (*DeleteRoleResponse, error)
 	//
 	//Delete resources.
-	DeleteResource(context.Context, *DeleteResourceRequest) (*emptypb.Empty, error)
+	DeleteResource(context.Context, *DeleteResourceRequest) (*DeleteResourceResponse, error)
+	AuthenticateUserPolicyByID(context.Context, *AuthenticateUserPolicyByIDRequest) (*AuthenticateUserPolicyByIDResponse, error)
 	mustEmbedUnimplementedAnubisServer()
 }
 
@@ -169,14 +180,17 @@ func (UnimplementedAnubisServer) AuthenticateRolesPolicy(context.Context, *Authe
 func (UnimplementedAnubisServer) GetRolePolicies(context.Context, *GetRolePoliciesRequest) (*GetRolePoliciesResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetRolePolicies not implemented")
 }
-func (UnimplementedAnubisServer) UnsetRolePolicies(context.Context, *UnsetRolePoliciesRequest) (*emptypb.Empty, error) {
+func (UnimplementedAnubisServer) UnsetRolePolicies(context.Context, *UnsetRolePoliciesRequest) (*UnsetRolePoliciesResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method UnsetRolePolicies not implemented")
 }
 func (UnimplementedAnubisServer) DeleteRole(context.Context, *DeleteRoleRequest) (*DeleteRoleResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method DeleteRole not implemented")
 }
-func (UnimplementedAnubisServer) DeleteResource(context.Context, *DeleteResourceRequest) (*emptypb.Empty, error) {
+func (UnimplementedAnubisServer) DeleteResource(context.Context, *DeleteResourceRequest) (*DeleteResourceResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method DeleteResource not implemented")
+}
+func (UnimplementedAnubisServer) AuthenticateUserPolicyByID(context.Context, *AuthenticateUserPolicyByIDRequest) (*AuthenticateUserPolicyByIDResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method AuthenticateUserPolicyByID not implemented")
 }
 func (UnimplementedAnubisServer) mustEmbedUnimplementedAnubisServer() {}
 
@@ -335,6 +349,24 @@ func _Anubis_DeleteResource_Handler(srv interface{}, ctx context.Context, dec fu
 	return interceptor(ctx, in, info, handler)
 }
 
+func _Anubis_AuthenticateUserPolicyByID_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(AuthenticateUserPolicyByIDRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(AnubisServer).AuthenticateUserPolicyByID(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/anubis.v1.Anubis/AuthenticateUserPolicyByID",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(AnubisServer).AuthenticateUserPolicyByID(ctx, req.(*AuthenticateUserPolicyByIDRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // Anubis_ServiceDesc is the grpc.ServiceDesc for Anubis service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -373,6 +405,10 @@ var Anubis_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "DeleteResource",
 			Handler:    _Anubis_DeleteResource_Handler,
+		},
+		{
+			MethodName: "AuthenticateUserPolicyByID",
+			Handler:    _Anubis_AuthenticateUserPolicyByID_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
