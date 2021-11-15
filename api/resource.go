@@ -4,8 +4,8 @@ import (
 	"context"
 
 	"github.com/NpoolPlatform/go-service-framework/pkg/logger"
-	"github.com/poolPlatform/permission-door/message/npool"
-	"github.com/poolPlatform/permission-door/pkg/middleware/resource"
+	"github.com/NpoolPlatform/permission-door/message/npool"
+	"github.com/NpoolPlatform/permission-door/pkg/middleware/resource"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 )

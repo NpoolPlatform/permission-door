@@ -3,9 +3,9 @@ package user
 import (
 	"context"
 
-	"github.com/poolPlatform/permission-door/message/npool"
-	"github.com/poolPlatform/permission-door/pkg/casbin"
-	"github.com/poolPlatform/permission-door/pkg/grpc"
+	"github.com/NpoolPlatform/permission-door/message/npool"
+	"github.com/NpoolPlatform/permission-door/pkg/casbin"
+	"github.com/NpoolPlatform/permission-door/pkg/grpc"
 	"golang.org/x/xerrors"
 )
 

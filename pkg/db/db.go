@@ -3,7 +3,7 @@ package db
 import (
 	"context"
 
-	"github.com/poolPlatform/permission-door/pkg/db/ent"
+	"github.com/NpoolPlatform/permission-door/pkg/db/ent"
 
 	"github.com/NpoolPlatform/go-service-framework/pkg/app"
 )

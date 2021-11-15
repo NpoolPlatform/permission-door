@@ -7,7 +7,7 @@ import (
 	"strings"
 
 	"entgo.io/ent/dialect/sql"
-	"github.com/poolPlatform/permission-door/pkg/db/ent/empty"
+	"github.com/NpoolPlatform/permission-door/pkg/db/ent/empty"
 )
 
 // Empty is the model entity for the Empty schema.

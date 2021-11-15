@@ -4,8 +4,8 @@ import (
 	"context"
 
 	"github.com/NpoolPlatform/go-service-framework/pkg/logger"
-	"github.com/poolPlatform/permission-door/message/npool"
-	"github.com/poolPlatform/permission-door/pkg/casbin"
+	"github.com/NpoolPlatform/permission-door/message/npool"
+	"github.com/NpoolPlatform/permission-door/pkg/casbin"
 )
 
 func DeleteResource(ctx context.Context, in *npool.DeleteResourceRequest) (*npool.DeleteResourceResponse, error) {

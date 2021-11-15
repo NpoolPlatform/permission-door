@@ -6,8 +6,8 @@ import (
 	"strconv"
 	"testing"
 
+	testinit "github.com/NpoolPlatform/permission-door/pkg/test-init"
 	"github.com/google/uuid"
-	testinit "github.com/poolPlatform/permission-door/pkg/test-init"
 	"github.com/stretchr/testify/assert"
 )
 

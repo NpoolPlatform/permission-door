@@ -1,4 +1,4 @@
-module github.com/poolPlatform/permission-door
+module github.com/NpoolPlatform/permission-door
 
 go 1.16
 

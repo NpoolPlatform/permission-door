@@ -6,7 +6,7 @@ import (
 	"runtime"
 
 	"github.com/NpoolPlatform/go-service-framework/pkg/app"
-	servicename "github.com/poolPlatform/permission-door/pkg/service-name"
+	servicename "github.com/NpoolPlatform/permission-door/pkg/service-name"
 
 	//nolint
 	"golang.org/x/xerrors"

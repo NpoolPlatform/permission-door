@@ -6,7 +6,7 @@ import (
 	"strconv"
 	"testing"
 
-	testinit "github.com/poolPlatform/permission-door/pkg/test-init"
+	testinit "github.com/NpoolPlatform/permission-door/pkg/test-init"
 )
 
 func init() {

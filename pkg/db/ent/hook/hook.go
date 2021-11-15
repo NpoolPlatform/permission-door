@@ -6,7 +6,7 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/poolPlatform/permission-door/pkg/db/ent"
+	"github.com/NpoolPlatform/permission-door/pkg/db/ent"
 )
 
 // The EmptyFunc type is an adapter to allow the use of ordinary

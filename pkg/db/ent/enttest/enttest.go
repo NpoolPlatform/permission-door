@@ -5,9 +5,9 @@ package enttest
 import (
 	"context"
 
-	"github.com/poolPlatform/permission-door/pkg/db/ent"
+	"github.com/NpoolPlatform/permission-door/pkg/db/ent"
 	// required by schema hooks.
-	_ "github.com/poolPlatform/permission-door/pkg/db/ent/runtime"
+	_ "github.com/NpoolPlatform/permission-door/pkg/db/ent/runtime"
 
 	"entgo.io/ent/dialect/sql/schema"
 )

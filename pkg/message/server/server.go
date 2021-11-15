@@ -2,7 +2,7 @@ package server
 
 import (
 	msgsrv "github.com/NpoolPlatform/go-service-framework/pkg/rabbitmq/server"
-	msg "github.com/poolPlatform/permission-door/pkg/message/message"
+	msg "github.com/NpoolPlatform/permission-door/pkg/message/message"
 )
 
 func Init() error {

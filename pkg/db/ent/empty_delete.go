@@ -9,8 +9,8 @@ import (
 	"entgo.io/ent/dialect/sql"
 	"entgo.io/ent/dialect/sql/sqlgraph"
 	"entgo.io/ent/schema/field"
-	"github.com/poolPlatform/permission-door/pkg/db/ent/empty"
-	"github.com/poolPlatform/permission-door/pkg/db/ent/predicate"
+	"github.com/NpoolPlatform/permission-door/pkg/db/ent/empty"
+	"github.com/NpoolPlatform/permission-door/pkg/db/ent/predicate"
 )
 
 // EmptyDelete is the builder for deleting a Empty entity.

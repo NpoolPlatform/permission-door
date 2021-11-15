@@ -5,9 +5,9 @@ import (
 	"strconv"
 	"testing"
 
+	"github.com/NpoolPlatform/permission-door/message/npool"
 	"github.com/go-resty/resty/v2"
 	"github.com/google/uuid"
-	"github.com/poolPlatform/permission-door/message/npool"
 	"github.com/stretchr/testify/assert"
 )
 

@@ -6,8 +6,8 @@ import (
 	"golang.org/x/xerrors"
 
 	msgcli "github.com/NpoolPlatform/go-service-framework/pkg/rabbitmq/client"
-	constant "github.com/poolPlatform/permission-door/pkg/message/const"
-	msg "github.com/poolPlatform/permission-door/pkg/message/message"
+	constant "github.com/NpoolPlatform/permission-door/pkg/message/const"
+	msg "github.com/NpoolPlatform/permission-door/pkg/message/message"
 
 	"github.com/streadway/amqp"
 )

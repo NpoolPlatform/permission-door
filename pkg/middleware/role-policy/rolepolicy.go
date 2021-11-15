@@ -4,8 +4,8 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/poolPlatform/permission-door/message/npool"
-	"github.com/poolPlatform/permission-door/pkg/casbin"
+	"github.com/NpoolPlatform/permission-door/message/npool"
+	"github.com/NpoolPlatform/permission-door/pkg/casbin"
 	"golang.org/x/xerrors"
 )
 

@@ -2,7 +2,7 @@ package version
 
 import (
 	cv "github.com/NpoolPlatform/go-service-framework/pkg/version"
-	"github.com/poolPlatform/permission-door/message/npool"
+	"github.com/NpoolPlatform/permission-door/message/npool"
 	"golang.org/x/xerrors"
 )
 

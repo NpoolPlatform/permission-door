@@ -7,9 +7,9 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/poolPlatform/permission-door/pkg/db/ent/migrate"
+	"github.com/NpoolPlatform/permission-door/pkg/db/ent/migrate"
 
-	"github.com/poolPlatform/permission-door/pkg/db/ent/empty"
+	"github.com/NpoolPlatform/permission-door/pkg/db/ent/empty"
 
 	"entgo.io/ent/dialect"
 	"entgo.io/ent/dialect/sql"

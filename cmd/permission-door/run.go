@@ -3,13 +3,13 @@ package main
 import (
 	"time"
 
-	"github.com/poolPlatform/permission-door/api"
-	"github.com/poolPlatform/permission-door/pkg/casbin"
-	db "github.com/poolPlatform/permission-door/pkg/db"
-	msgcli "github.com/poolPlatform/permission-door/pkg/message/client"
-	msglistener "github.com/poolPlatform/permission-door/pkg/message/listener"
-	msg "github.com/poolPlatform/permission-door/pkg/message/message"
-	msgsrv "github.com/poolPlatform/permission-door/pkg/message/server"
+	"github.com/NpoolPlatform/permission-door/api"
+	"github.com/NpoolPlatform/permission-door/pkg/casbin"
+	db "github.com/NpoolPlatform/permission-door/pkg/db"
+	msgcli "github.com/NpoolPlatform/permission-door/pkg/message/client"
+	msglistener "github.com/NpoolPlatform/permission-door/pkg/message/listener"
+	msg "github.com/NpoolPlatform/permission-door/pkg/message/message"
+	msgsrv "github.com/NpoolPlatform/permission-door/pkg/message/server"
 
 	grpc2 "github.com/NpoolPlatform/go-service-framework/pkg/grpc"
 	"github.com/NpoolPlatform/go-service-framework/pkg/logger"

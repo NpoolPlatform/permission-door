@@ -8,7 +8,7 @@ import (
 
 	"entgo.io/ent"
 	"entgo.io/ent/dialect/sql"
-	"github.com/poolPlatform/permission-door/pkg/db/ent/empty"
+	"github.com/NpoolPlatform/permission-door/pkg/db/ent/empty"
 )
 
 // ent aliases to avoid import conflicts in user's code.
