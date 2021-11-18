@@ -4,8 +4,8 @@ go 1.16
 
 require (
 	entgo.io/ent v0.9.1
-	github.com/NpoolPlatform/application-management v0.0.0-20211114130519-bcb592a33694
-	github.com/NpoolPlatform/go-service-framework v0.0.0-20211031094530-5ab1b9965285
+	github.com/NpoolPlatform/application-management v0.0.0-20211118073342-19d4087ce5d7
+	github.com/NpoolPlatform/go-service-framework v0.0.0-20211117074545-bc1340849b08
 	github.com/casbin/casbin/v2 v2.28.3
 	github.com/casbin/xorm-adapter/v2 v2.4.0
 	github.com/go-resty/resty/v2 v2.7.0
@@ -15,7 +15,7 @@ require (
 	github.com/stretchr/testify v1.7.0
 	github.com/urfave/cli/v2 v2.3.0
 	golang.org/x/xerrors v0.0.0-20200804184101-5ec99f83aff1
-	google.golang.org/genproto v0.0.0-20211104193956-4c6863e31247
+	google.golang.org/genproto v0.0.0-20211117155847-120650a500bb
 	google.golang.org/grpc v1.41.0
 	google.golang.org/grpc/cmd/protoc-gen-go-grpc v1.1.0
 	google.golang.org/protobuf v1.27.1

@@ -2,31 +2,15 @@ package grpc
 
 import (
 	"context"
-	"strings"
 
 	pbApplication "github.com/NpoolPlatform/application-management/message/npool"
-	"github.com/NpoolPlatform/go-service-framework/pkg/config"
+	applicationconst "github.com/NpoolPlatform/application-management/pkg/message/const"
 	mygrpc "github.com/NpoolPlatform/go-service-framework/pkg/grpc"
 	"google.golang.org/grpc"
 )
 
-const (
-	ApplicationService         = "application-management.npool.top"
-	ApplicationServiceGRPCPort = "50081"
-)
-
 func newApplicationGrpcClient() (*grpc.ClientConn, error) {
-	serviceAgent, err := config.PeekService(ApplicationService)
-	if err != nil {
-		return nil, err
-	}
-
-	myAddress := []string{}
-	for _, address := range strings.Split(serviceAgent.Address, ",") {
-		myAddress = append(myAddress, address+":50081")
-	}
-
-	conn, err := mygrpc.GetGRPCConn(strings.Join(myAddress, ","))
+	conn, err := mygrpc.GetGRPCConn(applicationconst.ServiceName, mygrpc.GRPCTAG)
 	if err != nil {
 		return nil, err
 	}
