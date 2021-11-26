@@ -15,7 +15,7 @@ spec:
     - host: api.npool.top
       http:
         paths:
-          - path: /permission-door
+          - path: /api/permission-door
             backend:
               serviceName: permission-door
               servicePort: 50100
@@ -39,7 +39,7 @@ spec:
     - host: api.xpool.top
       http:
         paths:
-          - path: /permission-door
+          - path: /api/permission-door
             backend:
               serviceName: permission-door
               servicePort: 50100
@@ -54,4 +54,4 @@ metadata:
 spec:
   stripPrefix:
     prefixes:
-      - /permission-door
+      - /api/permission-door
