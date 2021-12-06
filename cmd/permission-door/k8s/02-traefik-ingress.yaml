@@ -1,11 +1,11 @@
 apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
-  name: permission-door-ingress
+  name: permission-door-traefik-ingress
   namespace: kube-system
   annotations:
-    k8s.kuboard.cn/displayName: permission-door
-    k8s.kuboard.cn/workload: permission-door
+    k8s.kuboard.cn/displayName: permission-door-traefik
+    k8s.kuboard.cn/workload: permission-door-traefik
     kubernetes.io/ingress.class: "traefik-internet"
     traefik.ingress.kubernetes.io/router.entrypoints: web,websecure
     traefik.ingress.kubernetes.io/router.middlewares: kube-system-strip-permission-door-prefix@kubernetescrd,kube-system-common-headers@kubernetescrd
@@ -15,7 +15,7 @@ spec:
     - host: api.npool.top
       http: &http_rules
         paths:
-          - path: /api/permission-door
+          - path: /api/permission-door/version
             backend:
               serviceName: permission-door
               servicePort: 50100

@@ -1,6 +1,7 @@
 commonLabels:
-  # app: permission-door
+# app: application-management
 
 resources:
-- 01-permission-door.yaml
-- 02-ingress.yaml
+  - 01-application-management.yaml
+  - 02-traefik-ingress.yaml
+  - 03-nginx-ingress.yaml
