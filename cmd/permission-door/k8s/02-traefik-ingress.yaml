@@ -25,6 +25,10 @@ spec:
       http: *http_rules
     - host: www.xpool.top
       http: *http_rules
+    - host: www.procyon.vip
+      http: *http_rules
+    - host: procyon.vip
+      http: *http_rules
 
 ---
 

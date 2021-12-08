@@ -4,8 +4,8 @@ go 1.16
 
 require (
 	entgo.io/ent v0.9.1
-	github.com/NpoolPlatform/application-management v0.0.0-20211118073342-19d4087ce5d7
-	github.com/NpoolPlatform/go-service-framework v0.0.0-20211117074545-bc1340849b08
+	github.com/NpoolPlatform/application-management v0.0.0-20211208025229-05c3643bbb23
+	github.com/NpoolPlatform/go-service-framework v0.0.0-20211207121121-adb2402676f0
 	github.com/casbin/casbin/v2 v2.28.3
 	github.com/casbin/xorm-adapter/v2 v2.4.0
 	github.com/go-resty/resty/v2 v2.7.0
@@ -14,7 +14,6 @@ require (
 	github.com/streadway/amqp v1.0.0
 	github.com/stretchr/testify v1.7.0
 	github.com/urfave/cli/v2 v2.3.0
-	golang.org/x/sys v0.0.0-20211019181941-9d821ace8654 // indirect
 	golang.org/x/xerrors v0.0.0-20200804184101-5ec99f83aff1
 	google.golang.org/genproto v0.0.0-20211117155847-120650a500bb
 	google.golang.org/grpc v1.41.0
