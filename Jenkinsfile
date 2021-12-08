@@ -266,7 +266,7 @@ pipeline {
           tag=`git describe --tags $revlist`
 
           set +e
-          docker images | grep application-management | grep $tag
+          docker images | grep permission-door | grep $tag
           rc=$?
           set -e
           if [ 0 -eq $rc ]; then
@@ -293,7 +293,7 @@ pipeline {
           tag=$major.$minor.$patch
 
           set +e
-          docker images | grep application-management | grep $tag
+          docker images | grep permission-door | grep $tag
           rc=$?
           set -e
           if [ 0 -eq $rc ]; then
