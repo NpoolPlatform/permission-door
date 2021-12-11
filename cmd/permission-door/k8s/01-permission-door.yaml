@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: permission-door
-        image: entropypool/permission-door:latest
+        image: uhub.service.ucloud.cn/entropypool/permission-door:latest
         imagePullPolicy: Always
         env:
         - name: ENV_ENVIRONMENT_TARGET
