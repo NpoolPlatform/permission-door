@@ -14,6 +14,8 @@ func GetUserRoleIDs(userID, appID string) ([]string, error) {
 		return nil, err
 	}
 
+	defer conn.Close()
+
 	client := pbApplication.NewApplicationManagementClient(conn)
 	resp, err := client.GetUserRole(context.Background(), &pbApplication.GetUserRoleRequest{
 		UserID: userID,

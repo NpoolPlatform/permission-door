@@ -4,7 +4,7 @@ go 1.16
 
 require (
 	entgo.io/ent v0.9.1
-	github.com/NpoolPlatform/application-management v0.0.0-20211208025229-05c3643bbb23
+	github.com/NpoolPlatform/application-management v0.0.0-20211211102648-f013d1cb53b4
 	github.com/NpoolPlatform/go-service-framework v0.0.0-20211207121121-adb2402676f0
 	github.com/casbin/casbin/v2 v2.28.3
 	github.com/casbin/xorm-adapter/v2 v2.4.0
