@@ -1,6 +1,7 @@
 package grpc
 
 import (
+	"context"
 	"fmt"
 	"os"
 	"strconv"
@@ -28,6 +29,6 @@ func TestGrpc(t *testing.T) {
 
 	userID := uuid.New().String()
 	appID := uuid.New().String()
-	_, err := GetUserRoleIDs(userID, appID)
+	_, err := GetUserRoleIDs(context.Background(), userID, appID)
 	assert.NotNil(t, err)
 }

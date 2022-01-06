@@ -8,7 +8,7 @@ import (
 	mygrpc "github.com/NpoolPlatform/go-service-framework/pkg/grpc"
 )
 
-func GetUserRoleIDs(userID, appID string) ([]string, error) {
+func GetUserRoleIDs(ctx context.Context, userID, appID string) ([]string, error) {
 	conn, err := mygrpc.GetGRPCConn(applicationconst.ServiceName, mygrpc.GRPCTAG)
 	if err != nil {
 		return nil, err
@@ -17,7 +17,7 @@ func GetUserRoleIDs(userID, appID string) ([]string, error) {
 	defer conn.Close()
 
 	client := pbApplication.NewApplicationManagementClient(conn)
-	resp, err := client.GetUserRole(context.Background(), &pbApplication.GetUserRoleRequest{
+	resp, err := client.GetUserRole(ctx, &pbApplication.GetUserRoleRequest{
 		UserID: userID,
 		AppID:  appID,
 	})

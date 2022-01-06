@@ -10,7 +10,7 @@ import (
 )
 
 func AuthenticateUserPolicyByID(ctx context.Context, in *npool.AuthenticateUserPolicyByIDRequest) (*npool.AuthenticateUserPolicyByIDResponse, error) {
-	resp, err := grpc.GetUserRoleIDs(in.UserID, in.AppID)
+	resp, err := grpc.GetUserRoleIDs(ctx, in.UserID, in.AppID)
 	if err != nil {
 		return nil, xerrors.Errorf("fail to get user role: %v", err)
 	}
