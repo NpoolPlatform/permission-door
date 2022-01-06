@@ -2,19 +2,17 @@ package api
 
 import (
 	"context"
-	"time"
 
 	"github.com/NpoolPlatform/go-service-framework/pkg/logger"
 	"github.com/NpoolPlatform/permission-door/message/npool"
+	myconst "github.com/NpoolPlatform/permission-door/pkg/message/const"
 	rolepolicy "github.com/NpoolPlatform/permission-door/pkg/middleware/role-policy"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 )
 
-const timeDuration = 5 * time.Second
-
 func (s *Server) SetRolePolicies(ctx context.Context, in *npool.SetRolePoliciesRequest) (*npool.SetRolePoliciesResponse, error) {
-	ctx, cancel := context.WithTimeout(ctx, timeDuration)
+	ctx, cancel := context.WithTimeout(ctx, myconst.GrpcTimeout)
 	defer cancel()
 
 	resp, err := rolepolicy.SetRolePolicies(ctx, in)
@@ -26,7 +24,7 @@ func (s *Server) SetRolePolicies(ctx context.Context, in *npool.SetRolePoliciesR
 }
 
 func (s *Server) GetRolePolicies(ctx context.Context, in *npool.GetRolePoliciesRequest) (*npool.GetRolePoliciesResponse, error) {
-	ctx, cancel := context.WithTimeout(ctx, timeDuration)
+	ctx, cancel := context.WithTimeout(ctx, myconst.GrpcTimeout)
 	defer cancel()
 
 	resp, err := rolepolicy.GetRolePolicies(ctx, in)
@@ -38,7 +36,7 @@ func (s *Server) GetRolePolicies(ctx context.Context, in *npool.GetRolePoliciesR
 }
 
 func (s *Server) AuthenticateRolePolicy(ctx context.Context, in *npool.AuthenticateRolePolicyRequest) (*npool.AuthenticateRolePolicyResponse, error) {
-	ctx, cancel := context.WithTimeout(ctx, timeDuration)
+	ctx, cancel := context.WithTimeout(ctx, myconst.GrpcTimeout)
 	defer cancel()
 
 	resp, err := rolepolicy.AuthenticateRolePolicy(ctx, in)
@@ -50,7 +48,7 @@ func (s *Server) AuthenticateRolePolicy(ctx context.Context, in *npool.Authentic
 }
 
 func (s *Server) AuthenticateRolesPolicy(ctx context.Context, in *npool.AuthenticateRolesPolicyRequest) (*npool.AuthenticateRolesPolicyResponse, error) {
-	ctx, cancel := context.WithTimeout(ctx, timeDuration)
+	ctx, cancel := context.WithTimeout(ctx, myconst.GrpcTimeout)
 	defer cancel()
 
 	resp, err := rolepolicy.AuthenticateRolesPolicy(ctx, in)
@@ -62,7 +60,7 @@ func (s *Server) AuthenticateRolesPolicy(ctx context.Context, in *npool.Authenti
 }
 
 func (s *Server) UnsetRolePolicies(ctx context.Context, in *npool.UnsetRolePoliciesRequest) (*npool.UnsetRolePoliciesResponse, error) {
-	ctx, cancel := context.WithTimeout(ctx, timeDuration)
+	ctx, cancel := context.WithTimeout(ctx, myconst.GrpcTimeout)
 	defer cancel()
 
 	resp, err := rolepolicy.UnsetRolePolicies(ctx, in)
@@ -74,7 +72,7 @@ func (s *Server) UnsetRolePolicies(ctx context.Context, in *npool.UnsetRolePolic
 }
 
 func (s *Server) DeleteRole(ctx context.Context, in *npool.DeleteRoleRequest) (*npool.DeleteRoleResponse, error) {
-	ctx, cancel := context.WithTimeout(ctx, timeDuration)
+	ctx, cancel := context.WithTimeout(ctx, myconst.GrpcTimeout)
 	defer cancel()
 
 	resp, err := rolepolicy.DeleteRole(ctx, in)

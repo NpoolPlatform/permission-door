@@ -6,7 +6,8 @@ import (
 	"entgo.io/ent/dialect"
 	entsql "entgo.io/ent/dialect/sql"
 	"github.com/NpoolPlatform/go-service-framework/pkg/mysql"
-	"github.com/NpoolPlatform/permission-door/pkg/db/ent"
+
+	"github.com/casbin/ent-adapter/ent"
 )
 
 func client() (*ent.Client, error) {

@@ -2,6 +2,7 @@ package testinit
 
 import (
 	"fmt"
+	"log"
 	"path"
 	"runtime"
 
@@ -25,7 +26,7 @@ func Init() error {
 
 	appName := path.Base(path.Dir(path.Dir(path.Dir(myPath))))
 	configPath := fmt.Sprintf("%s/../../cmd/%v", path.Dir(myPath), appName)
-	fmt.Println("config path is", configPath)
+	log.Fatalf("config path is %v", configPath)
 
 	err := app.Init(servicename.ServiceName, "", "", "", configPath, nil, nil,
 		config.ServiceNameToNamespace(mysqlconst.MysqlServiceName),

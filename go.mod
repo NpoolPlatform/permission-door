@@ -6,8 +6,8 @@ require (
 	entgo.io/ent v0.9.1
 	github.com/NpoolPlatform/application-management v0.0.0-20211228043636-766772748ce7
 	github.com/NpoolPlatform/go-service-framework v0.0.0-20211222114515-4928e6cf3f1f
-	github.com/casbin/casbin/v2 v2.28.3
-	github.com/casbin/xorm-adapter/v2 v2.4.0
+	github.com/casbin/casbin/v2 v2.29.2
+	github.com/casbin/ent-adapter v0.2.1
 	github.com/go-resty/resty/v2 v2.7.0
 	github.com/google/uuid v1.3.0
 	github.com/grpc-ecosystem/grpc-gateway/v2 v2.6.0

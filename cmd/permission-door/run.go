@@ -5,7 +5,6 @@ import (
 
 	"github.com/NpoolPlatform/permission-door/api"
 	"github.com/NpoolPlatform/permission-door/pkg/casbin"
-	db "github.com/NpoolPlatform/permission-door/pkg/db"
 	msgcli "github.com/NpoolPlatform/permission-door/pkg/message/client"
 	msglistener "github.com/NpoolPlatform/permission-door/pkg/message/listener"
 	msg "github.com/NpoolPlatform/permission-door/pkg/message/message"
@@ -26,9 +25,10 @@ var runCmd = &cli.Command{
 	Aliases: []string{"s"},
 	Usage:   "Run the daemon",
 	Action: func(c *cli.Context) error {
-		if err := db.Init(); err != nil {
-			return err
-		}
+		// already create schema by casbin
+		// if err := db.Init(); err != nil {
+		// 	return err
+		// }
 
 		if err := casbin.NewCasbinEnforcer(); err != nil {
 			return err

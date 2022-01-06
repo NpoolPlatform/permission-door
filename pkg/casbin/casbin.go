@@ -1,42 +1,22 @@
 package casbin
 
 import (
-	"fmt"
-
-	"github.com/NpoolPlatform/go-service-framework/pkg/config"
-	constant "github.com/NpoolPlatform/go-service-framework/pkg/mysql/const"
+	"github.com/NpoolPlatform/permission-door/pkg/db"
 	"github.com/casbin/casbin/v2"
 	"github.com/casbin/casbin/v2/model"
-	xormadapter "github.com/casbin/xorm-adapter/v2"
+	entadapter "github.com/casbin/ent-adapter"
 	"golang.org/x/xerrors"
 )
 
 var enforcer *casbin.Enforcer
 
-const (
-	CasbinTableName = "casbin_rules"
-)
-
-func GetMysqlConfig() (string, error) {
-	service, err := config.PeekService(constant.MysqlServiceName)
-	if err != nil {
-		return "", xerrors.Errorf("Fail to query mysql service: %v", err)
-	}
-
-	username := config.GetStringValueWithNameSpace(constant.MysqlServiceName, "username")
-	password := config.GetStringValueWithNameSpace(constant.MysqlServiceName, "password")
-	myServiceName := config.GetStringValueWithNameSpace("", config.KeyHostname)
-	dbname := config.GetStringValueWithNameSpace(myServiceName, "database_name")
-
-	return fmt.Sprintf("%v:%v@tcp(%v:%v)/%v", username, password, service.Address, service.Port, dbname), nil
-}
-
 func NewCasbinEnforcer() error {
-	dataSource, err := GetMysqlConfig()
+	client, err := db.Client()
 	if err != nil {
-		return xerrors.Errorf("fail to get mysql config, error: %v", err)
+		return err
 	}
-	adapter, err := xormadapter.NewAdapterWithTableName("mysql", dataSource, CasbinTableName, true)
+
+	adapter, err := entadapter.NewAdapterWithClient(client)
 	if err != nil {
 		return xerrors.Errorf("fail to create adapter, error: %v", err)
 	}
