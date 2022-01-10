@@ -1,7 +1,8 @@
 package grpc
 
 import (
-	"fmt"
+	"context"
+	"log"
 	"os"
 	"strconv"
 	"testing"
@@ -17,7 +18,7 @@ func init() {
 	}
 
 	if err := testinit.Init(); err != nil {
-		fmt.Printf("cannot init test stub: %v\n", err)
+		log.Fatalf("cannot init test stub: %v\n", err)
 	}
 }
 
@@ -28,6 +29,6 @@ func TestGrpc(t *testing.T) {
 
 	userID := uuid.New().String()
 	appID := uuid.New().String()
-	_, err := GetUserRoleIDs(userID, appID)
+	_, err := GetUserRoleIDs(context.Background(), userID, appID)
 	assert.NotNil(t, err)
 }
